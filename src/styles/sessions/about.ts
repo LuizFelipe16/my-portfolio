@@ -8,4 +8,142 @@ export const About = styled.div`
 
   background-image: url('/images/about-bg.png');
   object-fit: cover;
+  position: relative;
+
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  > img {
+    width: 16rem;
+    height: 16rem;
+
+    position: absolute;
+    object-fit: cover;
+    background-color: var(--gray-900);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    right: 500px;
+
+    border-radius: 100%;
+    border-left: 10px solid var(--cyan-500);
+    border-right: 10px solid var(--cyan-500);
+    border-top: 10px solid var(--gray-900);
+    border-bottom: 10px solid var(--gray-900);
+
+    transition: 0.2s;
+    animation: blinker_circle 3s infinite both;
+  }
+
+  @keyframes blinker_circle {
+    0% {
+      margin-right: 0rem;
+      margin-bottom: -7rem;
+    }
+    25% {
+      margin-left: 7rem;
+    }
+    50% {
+      margin-left: 0rem;
+      margin-top: -7rem;
+    }
+    75% {
+      margin-right: 7rem;
+      margin-top: 0rem;
+    }
+    100% {
+      margin-right: 0rem;
+      margin-bottom: -7rem;
+    }
+  }
+
+  .infos {
+    width: 32rem;
+    height: 100%;
+    padding-left: 4rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+    justify-content: center;
+
+    h2 {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--cyan-500);
+      font-weight: 100;
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--white);
+      font-weight: 300;
+      font-size: 1rem;
+      
+      margin-bottom: 5rem;
+    }
+
+    .tec-skills {
+      width: 100vw;
+      height: 6rem;
+
+      position: absolute;
+      bottom: -35px;
+      left: 0;
+
+      /* border: 1px solid red; */
+
+      flex-direction: row;
+      gap: 5rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      align-items: center;
+      justify-content: space-around;
+
+      div {
+        width: 6.5rem;
+        height: 6.5rem;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 1rem;
+        /* background-color: var(--gray-900); */
+
+        align-items: center;
+        justify-content: center;
+        
+        img {
+          width: 90%;
+          height: 90%;
+          border-radius: 1rem;
+          object-fit: contain;
+        }
+      }
+    }
+
+    .quote {
+      font-size: 2rem !important;
+    }
+  }
+
+  .about {
+    width: 31rem;
+    height: auto;
+    padding-right: 7.8rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+    justify-content: center;
+
+    h1 {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--cyan-500);
+      font-weight: bold;
+      font-size: 2.8rem;
+    }
+
+    p {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--white);
+      font-weight: 300;
+      font-size: 1rem;
+    }
+  }
 `;

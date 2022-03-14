@@ -9,6 +9,17 @@ export const Welcome = styled.main`
 
   position: relative;
 
+  .back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+  }
+
   .content {
     width: 47rem;
     height: 100%;
@@ -65,6 +76,25 @@ export const Welcome = styled.main`
       }
       to {
         border-right-color: transparent;
+      }
+    }
+
+    .arrow-down {
+      background-color: var(--gray-800);
+      border-radius: 100%;
+      font-size: 1.7rem;
+      padding: 0.5rem;
+      color: var(--cyan-500);
+
+      animation: rotate-el 2s infinite normal;
+    }
+
+    @keyframes rotate-el {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
       }
     }
   }

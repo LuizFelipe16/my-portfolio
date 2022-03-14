@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
   :root {
     --red: #e52e4d;
+    --white: #fff;
 
     --gray-900: #171923;
     --gray-800: #1A202C;
@@ -10,6 +11,7 @@ export const GlobalStyle = createGlobalStyle`
     --gray-600: #4A5568;
     --gray-200: #B3B5C6;
     --gray-100: #D1D2DC;
+    --gray-50: #fff;
 
     --purple-900: #5429cc;
     --purple-800: #44337A;
@@ -39,6 +41,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     overflow-x: hidden;
+    background-color: var(--gray-900);
   }
 
   button {
@@ -47,6 +50,18 @@ export const GlobalStyle = createGlobalStyle`
 
   div {
     display: flex;
+  }
+
+  .text-italic {
+    font-style: italic;
+  }
+
+  .p {
+    padding: 0.3rem;
+  }
+
+  .flex-dir-column {
+    flex-direction: column;
   }
 
   [disabled] {

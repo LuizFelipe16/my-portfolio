@@ -16,8 +16,8 @@ export const MenuTools = styled.div`
   justify-content: center;
 
   .button-tool {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
 
     background-color: var(--cyan-500);
     color: var(--gray-900);
