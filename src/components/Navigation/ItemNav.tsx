@@ -1,5 +1,5 @@
+import { scrollAnimationToSessionPageById } from "../../utils/scrollAnimationToSessionPageById";
 import { ItemNavStyles } from "./styles";
-import { scroller } from 'react-scroll';
 
 interface IItemNavProps {
   text: string;
@@ -7,15 +7,11 @@ interface IItemNavProps {
 }
 
 export function ItemNav({ href, text }: IItemNavProps) {
-  const scrollToElementById = () => scroller.scrollTo(href, {
-    duration: 1500,
-    delay: 100,
-    smooth: 'easeInOutQuint',
-  });
+  const scroll = () => scrollAnimationToSessionPageById(href);
 
   return (
     <ItemNavStyles
-      onClick={scrollToElementById}
+      onClick={scroll}
     >
       {text}
       <hr />

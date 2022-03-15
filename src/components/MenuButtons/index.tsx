@@ -17,15 +17,33 @@ export function MenuButtons() {
       {
         !!isMenu && (
           <>
-            <Button className="button-tool" boxShadow="lg">
+            <Button
+              as="a"
+              href="https://github.com/LuizFelipe16"
+              target="_blank"
+              className="button-tool"
+              boxShadow="lg"
+            >
               <Icon fontSize={21} as={AiFillGithub} />
             </Button>
 
-            <Button className="button-tool" boxShadow="lg">
+            <Button
+              as="a"
+              href="https://www.instagram.com/luiz_2fs/"
+              target="_blank"
+              className="button-tool"
+              boxShadow="lg"
+            >
               <Icon fontSize={21} as={AiOutlineInstagram} />
             </Button>
 
-            <Button className="button-tool" boxShadow="lg">
+            <Button
+              as="a"
+              href="linkedin.com/in/luiz-felipe-siqueira-felizatti-00783a1ab/"
+              target="_blank"
+              className="button-tool"
+              boxShadow="lg"
+            >
               <Icon fontSize={21} as={AiFillLinkedin} />
             </Button>
 
