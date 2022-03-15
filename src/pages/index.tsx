@@ -60,7 +60,7 @@ function Home() {
         </div>
       </Welcome>
 
-      <About>
+      <About id="about">
         <div className="infos">
           <div className="flex-dir-column" data-aos="fade-down-right" data-aos-duration="1000">
             <h2>Citação</h2>
@@ -94,7 +94,7 @@ function Home() {
         </div>
       </About>
 
-      <Skills>
+      <Skills id="skills">
         <h1>Meus Diferenciais</h1>
         <Flex direction="column">
           <ItemSkill mt="5rem" />
@@ -112,7 +112,7 @@ function Home() {
         </Flex>
       </Skills>
 
-      <Services>
+      <Services id="services">
         <div>
           <h1>
             O que eu Faço

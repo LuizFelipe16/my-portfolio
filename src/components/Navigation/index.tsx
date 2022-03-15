@@ -19,10 +19,10 @@ export function Navigation() {
       align="center"
       justify="space-between"
     >
-      <ItemNav text="QUEM SOU" />
-      <ItemNav text="O QUE FAÇO" />
-      <ItemNav text="PORTFÓLIO" />
-      <ItemNav text="FALE COMIGO" />
+      <ItemNav href="about" text="QUEM SOU" />
+      <ItemNav href="services" text="O QUE FAÇO" />
+      <ItemNav href="portfolio" text="PORTFÓLIO" />
+      <ItemNav href="contact" text="FALE COMIGO" />
     </HStack>
   );
 }

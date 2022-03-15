@@ -6,6 +6,7 @@ export function Footer() {
   return (
     <>
       <Stack
+        id="contact"
         w="100vw"
         minH="100vh"
         bg="gray.900"

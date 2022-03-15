@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ItemNavStyles = styled.p`
+const ItemNavStyles = styled.button`
   color: var(--gray-50);
   font-size: 1.4rem;
   font-family: 'JetBrains Mono';
