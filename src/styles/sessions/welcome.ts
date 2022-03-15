@@ -4,10 +4,18 @@ export const Welcome = styled.main`
   width: 100vw;
   min-height: 100vh;
   
-  background-image: url('/images/home2-bg.png');
+  background-image: url('/images/home3-bg.png');
   object-fit: cover;
 
   position: relative;
+
+  .d-element {
+    background: transparent;
+    position: absolute;
+    object-fit: cover;
+    left: 60px;
+    top: 100px;
+  }
 
   .back-video {
     position: absolute;
@@ -31,8 +39,6 @@ export const Welcome = styled.main`
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-
-    /* border: 1px solid red; */
 
     .title-gradient {
       animation: entry_title 6s normal both;
@@ -76,25 +82,6 @@ export const Welcome = styled.main`
       }
       to {
         border-right-color: transparent;
-      }
-    }
-
-    .arrow-down {
-      background-color: var(--gray-800);
-      border-radius: 100%;
-      font-size: 1.7rem;
-      padding: 0.5rem;
-      color: var(--cyan-500);
-
-      animation: rotate-el 2s infinite normal;
-    }
-
-    @keyframes rotate-el {
-      0% {
-        transform: rotate(0);
-      }
-      100% {
-        transform: rotate(360deg);
       }
     }
   }

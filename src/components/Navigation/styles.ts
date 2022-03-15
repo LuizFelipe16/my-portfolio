@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const ItemNavStyles = styled.p`
-  color: var(--gray-50) !important;
+  color: var(--gray-50);
   font-size: 1.4rem;
   font-family: 'JetBrains Mono';
   cursor: pointer;
@@ -28,6 +28,7 @@ const ItemNavStyles = styled.p`
   }
 
   &:hover {
+    color: var(--cyan-500);
     hr {
       background: var(--cyan-500);
       width: 100%;

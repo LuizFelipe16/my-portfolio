@@ -73,7 +73,7 @@ export const About = styled.div`
       font-size: 1.5rem;
     }
 
-    p {
+    .text-info {
       font-family: 'Montserrat', sans-serif;
       color: var(--white);
       font-weight: 300;
@@ -99,17 +99,18 @@ export const About = styled.div`
       align-items: center;
       justify-content: space-around;
 
-      div {
+      > div {
         width: 6.5rem;
         height: 6.5rem;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         border-radius: 1rem;
         /* background-color: var(--gray-900); */
 
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         
-        img {
+        > img {
           width: 90%;
           height: 90%;
           border-radius: 1rem;
@@ -132,14 +133,14 @@ export const About = styled.div`
     align-items: flex-start;
     justify-content: center;
 
-    h1 {
+    > h1 {
       font-family: 'JetBrains Mono', monospace;
       color: var(--cyan-500);
       font-weight: bold;
       font-size: 2.8rem;
     }
 
-    p {
+    > p {
       font-family: 'Montserrat', sans-serif;
       color: var(--white);
       font-weight: 300;

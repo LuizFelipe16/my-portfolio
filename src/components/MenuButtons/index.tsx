@@ -17,21 +17,21 @@ export function MenuButtons() {
       {
         !!isMenu && (
           <>
-            <Button className="button-tool" boxShadow="dark-lg">
+            <Button className="button-tool" boxShadow="lg">
               <Icon fontSize={21} as={AiFillGithub} />
             </Button>
 
-            <Button className="button-tool" boxShadow="dark-lg">
+            <Button className="button-tool" boxShadow="lg">
               <Icon fontSize={21} as={AiOutlineInstagram} />
             </Button>
 
-            <Button className="button-tool" boxShadow="dark-lg">
+            <Button className="button-tool" boxShadow="lg">
               <Icon fontSize={21} as={AiFillLinkedin} />
             </Button>
 
             <Button
               className="button-tool"
-              boxShadow="dark-lg"
+              boxShadow="lg"
               onClick={() => animateScroll.scrollToTop({ duration: 1000 })}
             >
               <Icon fontSize={23} as={BsArrowUpShort} />
@@ -45,7 +45,7 @@ export function MenuButtons() {
         bgColor="#48CDD0"
         color="#171923"
 
-        boxShadow="dark-lg"
+        boxShadow="lg"
 
         onClick={handleOnOpenOrCloseMenu}
       >

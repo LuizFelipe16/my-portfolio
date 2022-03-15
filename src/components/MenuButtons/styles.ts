@@ -29,7 +29,7 @@ export const MenuTools = styled.div`
 
     &:hover {
       background-color: var(--cyan-500);
-      filter: brightness(0.8);
+      filter: brightness(0.9);
     }
   }
 
