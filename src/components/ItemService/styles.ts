@@ -16,7 +16,7 @@ export const ItemServiceStyle = styled.div`
   gap: 1rem;
   
   transition: 1s !important;
-  animation: blinker_neon 5s infinite both;
+  animation: blinker_neon 4s infinite both;
   
   &:hover {
     opacity: 1;

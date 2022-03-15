@@ -14,6 +14,7 @@ import { About } from "../styles/sessions/about";
 import { Skills } from "../styles/sessions/skills";
 import { Services } from "../styles/sessions/services";
 import { ItemService } from "../components/ItemService";
+import { Footer } from "../components/Footer";
 
 function Home() {
   const [isLoadingActive, setIsLoadingActive] = useState(true);
@@ -81,7 +82,7 @@ function Home() {
 
         <img src="/images/eu.jpeg" alt="Luiz Felipe" />
 
-        <div data-aos="zoom-in-left" data-aos-duration="2000" className="about">
+        <div data-aos="zoom-in-left" data-aos-duration="1000" className="about">
           <h1>Olá,</h1>
           <p>
             sou bullas, desenvolvedora de software entusiasta em UX. Especialista em
@@ -112,10 +113,22 @@ function Home() {
       </Skills>
 
       <Services>
-        <ItemService />
-        <ItemService />
-        <ItemService />
+        <div>
+          <h1>
+            O que eu Faço
+          </h1>
+          <h2>
+            serviços e soluções
+          </h2>
+        </div>
+        <div className="services">
+          <ItemService />
+          <ItemService />
+          <ItemService />
+        </div>
       </Services>
+
+      <Footer />
     </Flex>
   );
 }

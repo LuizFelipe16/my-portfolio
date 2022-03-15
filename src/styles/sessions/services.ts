@@ -10,8 +10,38 @@ export const Services = styled.div`
   object-fit: cover;
   position: relative;
 
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: space-evenly;
+  /* gap: 2rem; */
+
+  > div {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    > h1 {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--cyan-500);
+      font-weight: 400;
+      font-size: 2rem;
+    }
+
+    > h2 {
+      font-family: 'Nunito', sans-serif;
+      color: var(--gray-100);
+      font-weight: 100;
+      font-size: 1.1rem;
+      letter-spacing: 0.15rem;
+    }
+  }
+
+  .services {
+    width: 100%;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
 `;
