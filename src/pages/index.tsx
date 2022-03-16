@@ -66,11 +66,12 @@ function Home() {
         <div className="infos">
           <div className="flex-dir-column" data-aos="fade-down-right" data-aos-duration="1000">
             <h2>Citação</h2>
+            <br />
             <p className="text-italic text-info">
               <Icon className="quote" color="#48CDD0" mr="2" as={FaQuoteLeft} />
-              Existem duas maneiras de construir um projeto de software.
-              Uma é fazê-lo tão simples que obviamente não há falhas. A outra é fazê-lo tão
-              complicado que não existem falhas óbvias.
+              A maior habilidade de quem desenvolve códigos, é saber resolver problemas
+              através deles. Em frente a um computador, devemos encontrar soluções e se adaptar de acordo
+              com os erros e falhas.
               <Icon color="#48CDD0" ml="2" as={FaQuoteRight} />
             </p>
           </div>
@@ -87,11 +88,14 @@ function Home() {
         <div data-aos="zoom-in-left" data-aos-duration="1000" className="about">
           <h1>Olá,</h1>
           <p>
-            sou bullas, desenvolvedora de software entusiasta em UX. Especialista em
-            Aplicativos e Games com mais de 10 anos de experiência em mídias interativas.
-            Possuo experiência com equipes multinacionais, além de certificações compatível
-            e 4 prêmios de reconhecimento nacional junto à Funbites. Adoro desafios e acredit
-            na transformações do mundo com o poder de informações.
+            me chamo luiz, desenvolvedor fullStack,
+            especializado em Frontend Web focado em UX e design gráfico de qualidade.
+
+            Meu começo foi com JS há três anos, no ensino técnico e fui me aprofundar sozinho.
+
+            Criei diversos e variados projetos, sempre me aprimorando nas tecnologios que uso para
+            explorar possibilidades ilimitadas que o código é capaz de oferecer,
+            buscando soluções para os problemas que encontro.
           </p>
         </div>
       </About>
@@ -99,8 +103,24 @@ function Home() {
       <Skills id="skills">
         <h1>Meus Diferenciais</h1>
         <Flex direction="column">
-          <ItemSkill mt="5rem" />
-          <ItemSkill mt="10rem" />
+          <ItemSkill
+            mt="5rem"
+            img="/illustrations/code.svg"
+            title="Clean Code"
+            text={`
+              Tenho como minha principal diretriz durante o desenvolvimento, à
+              qualidade do código  seguindo as melhores práticas do mercado.
+            `}
+          />
+          <ItemSkill
+            mt="10rem"
+            img="/illustrations/design.svg"
+            title="Design de Alta Qualidade"
+            text={`
+              Trabalho com foco em designs de imagens e interfaces claras e objetivos de alta fidelidade, 
+              para a melhor experiência do usuário, assim como superar as expectativas do projeto.
+            `}
+          />
         </Flex>
         <div className="line">
           <div />
@@ -109,8 +129,26 @@ function Home() {
           <div />
         </div>
         <Flex direction="column">
-          <ItemSkill mt="15rem" />
-          <ItemSkill mt="13rem" />
+          <ItemSkill
+            mt="15rem"
+            img="/illustrations/modern.svg"
+            title="Desenvolvimento Moderno"
+            text={`
+              Desenvolvo projetos usando as melhores e mais modernas ferramentas do 
+              mercado, com interfaces que transmitem modernidade e intuitividade, 
+              chamando a atenção dos usuários.
+            `}
+          />
+          <ItemSkill
+            mt="13rem"
+            img="/illustrations/problens.svg"
+            title="Resolução de Problemas"
+            text={`
+              Meu principal objetivo é solucionar o problema principal que é exposto, 
+              da melhor forma possível,
+              usando tudo que estiver ao meu alcance.
+            `}
+          />
         </Flex>
       </Skills>
 
@@ -142,7 +180,7 @@ function Home() {
         <div className="portfolios">
           <ItemPortfolioFolder
             animation="fade-right"
-            title="Mais de 10 Sites desenvolvidos"
+            title="Mais de 35 Projetos desenvolvidos"
             text="Sites, Lading Pages, Plataformas, Sites Institucionais e mais"
           />
           <ItemPortfolioFolder

@@ -1,19 +1,23 @@
 import { Heading, Img, Progress, Stack, Text, VStack } from "@chakra-ui/react";
 
 interface IItemSkillProps {
+  title: string;
+  text: string;
+  img: string;
   mt: string;
 }
 
-export function ItemSkill({ mt }: IItemSkillProps) {
+export function ItemSkill({ mt, title, text, img }: IItemSkillProps) {
   return (
     <Stack
       data-aos="fade-down"
       data-aos-duration="2000"
       className="item-skill"
-      w="32rem"
+      w="33rem"
       h="12rem"
       mt={mt}
       p="6"
+      py="9"
       direction="row"
       boxShadow="2xl"
       bgColor="gray.900"
@@ -27,13 +31,12 @@ export function ItemSkill({ mt }: IItemSkillProps) {
         bg: 'gray.800',
       }}
     >
-      <Img w="8rem" src="/illustrations/code.svg" objectFit="cover" alt="Code" />
+      <Img w="8rem" src={img} objectFit="cover" alt="Code" />
 
       <VStack align="flex-start">
-        <Heading fontFamily="Montserrat" fontWeight="600" fontSize="2xl">Clean Code</Heading>
-        <Text fontFamily="JetBrains Mono" fontWeight="300" fontSize="sm">
-          Tenho como minha principal diretriz durante o desenvolvimento, à
-          qualidade do código  seguindo as melhores práticas do mercado.
+        <Heading fontFamily="Montserrat" fontWeight="500" fontSize="xl">{title}</Heading>
+        <Text fontFamily="Nunito" fontWeight="300" fontSize="md">
+          {text}
         </Text>
       </VStack>
     </Stack>
