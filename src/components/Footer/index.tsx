@@ -1,8 +1,27 @@
 import { Stack, Text, Heading, VStack, Button, Flex, Image } from "@chakra-ui/react";
+import { FormEvent, useState } from "react";
+import { scrollAnimationToSessionPageById } from "../../utils/scrollAnimationToSessionPageById";
 import { Textarea } from "../Form/AreaText";
 import { Input } from "../Form/Input";
 
 export function Footer() {
+  const [name, setName] = useState('');
+  const [subject, setSubject] = useState('');
+  const [email, setEmail] = useState('');
+
+  function sendMessage(e: FormEvent): void {
+    e.preventDefault();
+
+    const body = `Meu Nome é ${name}, meu email para contato é ${email}. ${subject}`;
+
+    const message = body.split(" ").join("%20");
+
+    const link =
+      `https://api.whatsapp.com/send?phone=5519989522121&text=${message}`;
+
+    window.location.href = link;
+  }
+
   return (
     <>
       <Stack
@@ -13,6 +32,7 @@ export function Footer() {
         bgImage="/images/footer-bg.png"
         objectFit="cover"
         p="8"
+        pb="14"
         direction="column"
         align="center"
         justify="center"
@@ -36,18 +56,37 @@ export function Footer() {
           </Text>
         </VStack>
 
-        <VStack as="form" w="80%" spacing="9">
+        <VStack as="form" onSubmit={sendMessage} w="80%" spacing="9">
           <Stack w="100%" direction="row" spacing="4">
-            <Input text="Seu Nome" w="35%" />
-            <Input text="Seu Melhor E-mail" w="40%" />
-            <Input text="Telefone de Contato" w="25%" />
+            <Input
+              value={name}
+              onChange={e => setName(e.target.value)}
+              name="name"
+              text="Seu Nome"
+              w="50%"
+            />
+            <Input
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              name="email"
+              text="Seu Melhor E-mail"
+              w="50%"
+            />
+            {/* <Input name="phone" text="Telefone de Contato" w="25%" /> */}
           </Stack>
-          <Stack w="100%" direction="row" spacing="6">
-            <Input text="Qual é o Assunto?" w="100%" />
-          </Stack>
-          <Textarea text="Escreva sua mensagem..." w="100%" />
+          {/* <Stack w="100%" direction="row" spacing="6">
+            <Input name="title" text="Qual é o Assunto?" w="100%" />
+          </Stack> */}
+          <Textarea
+            value={subject}
+            onChange={e => setSubject(e.target.value)}
+            name="subject"
+            text="Escreva sua mensagem..."
+            w="100%"
+          />
           <Button
             w="100%"
+            type="submit"
             borderRadius="full"
             bg="cyan.500"
             size="lg"
@@ -56,7 +95,6 @@ export function Footer() {
             _hover={{
               bg: 'cyan.600'
             }}
-
           >
             Enviar
           </Button>
@@ -91,10 +129,10 @@ export function Footer() {
           >
             Menu
           </Heading>
-          <Text>Quem sou</Text>
-          <Text>O que faço</Text>
-          <Text>Portfólio</Text>
-          <Text>Fale comigo</Text>
+          <Text as="button" onClick={() => scrollAnimationToSessionPageById('about')}>Quem sou</Text>
+          <Text as="button" onClick={() => scrollAnimationToSessionPageById('services')}>O que faço</Text>
+          <Text as="button" onClick={() => scrollAnimationToSessionPageById('portfolio')}>Portfólio</Text>
+          <Text as="button" onClick={() => scrollAnimationToSessionPageById('contact')}>Fale comigo</Text>
         </VStack>
         <VStack
           w="33%"
@@ -115,9 +153,11 @@ export function Footer() {
           >
             Redes Sociais
           </Heading>
-          <Text>Linkedin</Text>
-          <Text>Github</Text>
-          <Text>Instagram</Text>
+          <Text as="a" href="https://linkedin.com/in/luiz-felipe-siqueira-felizatti-00783a1ab/" target="_blank">
+            Linkedin
+          </Text>
+          <Text as="a" href="https://github.com/LuizFelipe16" target="_blank">Github</Text>
+          <Text as="a" href="https://www.instagram.com/luiz_2fs/" target="_blank">Instagram</Text>
         </VStack>
         <VStack
           w="33%"

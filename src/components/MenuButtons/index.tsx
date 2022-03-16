@@ -39,7 +39,7 @@ export function MenuButtons() {
 
             <Button
               as="a"
-              href="linkedin.com/in/luiz-felipe-siqueira-felizatti-00783a1ab/"
+              href="https://linkedin.com/in/luiz-felipe-siqueira-felizatti-00783a1ab/"
               target="_blank"
               className="button-tool"
               boxShadow="lg"

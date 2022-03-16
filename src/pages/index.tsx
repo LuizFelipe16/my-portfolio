@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Flex, Heading, Icon, Stack, Text } from "@chakra-ui/react";
+import { Flex, Icon, Text } from "@chakra-ui/react";
 import Head from "next/head";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
@@ -8,13 +8,15 @@ import { Navigation } from "../components/Navigation";
 import { Loading } from "../components/Loading";
 import { TecSkills } from "../components/TecSkills";
 import { ItemSkill } from "../components/ItemSkill";
+import { Footer } from "../components/Footer";
+import { ItemService } from "../components/ItemService";
+import { ItemPortfolioFolder } from "../components/ItemPortfolioFolder";
 
 import { Welcome } from "../styles/sessions/welcome";
 import { About } from "../styles/sessions/about";
 import { Skills } from "../styles/sessions/skills";
 import { Services } from "../styles/sessions/services";
-import { ItemService } from "../components/ItemService";
-import { Footer } from "../components/Footer";
+import { Portfolio } from "../styles/sessions/portfolio";
 
 function Home() {
   const [isLoadingActive, setIsLoadingActive] = useState(true);
@@ -127,6 +129,29 @@ function Home() {
           <ItemService />
         </div>
       </Services>
+
+      <Portfolio id="portfolio">
+        <div>
+          <h1>
+            Meu Portfólio
+          </h1>
+          <h2>
+            minha experiência de anos fazendo o que mais gosto
+          </h2>
+        </div>
+        <div className="portfolios">
+          <ItemPortfolioFolder
+            animation="fade-right"
+            title="Mais de 10 Sites desenvolvidos"
+            text="Sites, Lading Pages, Plataformas, Sites Institucionais e mais"
+          />
+          <ItemPortfolioFolder
+            animation="fade-left"
+            title="Mais de 70 Artes publicadas"
+            text="Brandings, Carrosseis, Posts Únicos, Artes de Anúncios para Redes Sociais e mais"
+          />
+        </div>
+      </Portfolio>
 
       <Footer />
     </Flex>
