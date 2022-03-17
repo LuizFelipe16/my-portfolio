@@ -18,7 +18,36 @@ export const TecSkillsStyles = styled.div`
   padding-left: 3rem;
   padding-right: 3rem;
 
-  div {
+  .swiper-skills {
+    width: 100%;
+  }
+
+  .swiper-pagination {
+    position: absolute;
+    left: 45%;
+    bottom: -5px;
+    text-align: center;
+    transition: 300ms opacity;
+    transform: translate3d(0, 0, 0);
+    z-index: 1000;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: flex;
+    top: 50%;
+    width: calc(var(--swiper-navigation-size) / 44 * 27);
+    height: var(--swiper-navigation-size);
+    margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+    z-index: 100;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--swiper-navigation-color, var(--swiper-theme-color));
+  }
+
+  .item {
     flex-direction: column;
     align-items: center;
     justify-content: center;

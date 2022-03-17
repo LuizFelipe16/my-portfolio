@@ -65,7 +65,7 @@ function Home() {
       <About id="about">
         <div className="infos">
           <div className="flex-dir-column" data-aos="fade-down-right" data-aos-duration="1000">
-            <h2>Citação</h2>
+            <h2>Meu Objetivo</h2>
             <br />
             <p className="text-italic text-info">
               <Icon className="quote" color="#48CDD0" mr="2" as={FaQuoteLeft} />

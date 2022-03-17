@@ -22,6 +22,19 @@ export const GlobalStyle = createGlobalStyle`
     --purple-300: #B794F4;
 
     --cyan-500: #48CDD0;
+
+    --swiper-navigation-size: 30px;
+    --swiper-navigation-color: var(--cyan-500);
+    
+    --swiper-pagination-color: var(--cyan-500);
+    /* --swiper-pagination-bullet-size: 8px;
+    --swiper-pagination-bullet-width: 8px;
+    --swiper-pagination-bullet-height: 8px;
+    --swiper-pagination-bullet-inactive-color: #000;
+    --swiper-pagination-bullet-inactive-opacity: 0.2;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+    --swiper-pagination-bullet-vertical-gap: 6px; */
   }
 
   * {
