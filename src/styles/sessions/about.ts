@@ -58,7 +58,7 @@ export const About = styled.div`
   }
 
   .infos {
-    width: 32rem;
+    width: 36rem;
     height: 100%;
     padding-left: 4rem;
     flex-direction: column;
@@ -70,7 +70,7 @@ export const About = styled.div`
       font-family: 'JetBrains Mono', monospace;
       color: var(--cyan-500);
       font-weight: 100;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
     }
 
     .text-info {

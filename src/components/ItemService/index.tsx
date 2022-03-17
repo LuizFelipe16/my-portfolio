@@ -1,22 +1,26 @@
 import { Icon } from "@chakra-ui/react";
-import { FaFileCode } from "react-icons/fa";
+import { ReactChildren } from "react";
 
 import { ItemServiceStyle } from './styles';
 
 interface IItemServiceProps {
   mt?: string;
+
+  icon: any;
+  text: string;
+  title: string;
 }
 
-export function ItemService({ mt }: IItemServiceProps) {
+export function ItemService({ mt, title, text, icon }: IItemServiceProps) {
   return (
     <ItemServiceStyle
       data-aos="flip-down"
       data-aos-duration="2000"
     >
-      <Icon as={FaFileCode} color="cyan.500" fontSize="4rem" />
+      <Icon as={icon} color="cyan.500" fontSize="4rem" />
       <br />
-      <h1>Sites</h1>
-      <p>Desenvolvo de sites profissionais, blogs, portfólios, landing pages e e-commerce.</p>
+      <h1>{title}</h1>
+      <p>{text}</p>
     </ItemServiceStyle>
   );
 }

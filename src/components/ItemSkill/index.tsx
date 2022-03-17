@@ -11,7 +11,7 @@ export function ItemSkill({ mt, title, text, img }: IItemSkillProps) {
   return (
     <Stack
       data-aos="fade-down"
-      data-aos-duration="2000"
+      data-aos-duration="1000"
       className="item-skill"
       w="33rem"
       h="12rem"

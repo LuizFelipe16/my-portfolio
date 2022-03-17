@@ -23,8 +23,8 @@ export function TecSkills() {
       >
         <SwiperSlide>
           <div className="item">
-            <div className="icon"><img src="/skills/typescript.svg" alt="TypeScript" /></div>
-            <Text fontSize="sm" color="gray.900">TypeScript</Text>
+            <div className="icon"><img src="/skills/html.png" alt="HTML" /></div>
+            <Text fontSize="sm" color="gray.900">HTML</Text>
           </div>
         </SwiperSlide>
 
@@ -32,6 +32,13 @@ export function TecSkills() {
           <div className="item">
             <div className="icon"><img src="/skills/javascript.png" alt="JavaScript" /></div>
             <Text fontSize="sm" color="gray.900">JavaScript</Text>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="item">
+            <div className="icon"><img src="/skills/typescript.svg" alt="TypeScript" /></div>
+            <Text fontSize="sm" color="gray.900">TypeScript</Text>
           </div>
         </SwiperSlide>
 
@@ -51,8 +58,36 @@ export function TecSkills() {
 
         <SwiperSlide>
           <div className="item">
+            <div className="icon"><img src="/skills/form.png" alt="ReactHook" /></div>
+            <Text fontSize="sm" color="gray.900">React Hook Form</Text>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="item">
+            <div className="icon"><img src="/skills/query.png" alt="Query" /></div>
+            <Text fontSize="sm" color="gray.900">React Query</Text>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="item">
             <div className="icon"><img src="/skills/nodejs.png" alt="NodeJS" /></div>
             <Text fontSize="sm" color="gray.900">NodeJS</Text>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="item">
+            <div className="icon"><img src="/skills/typeorm.png" alt="TypeORM" /></div>
+            <Text fontSize="sm" color="gray.900">TypeORM</Text>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="item">
+            <div className="icon"><img src="/skills/jest.png" alt="Jest" /></div>
+            <Text fontSize="sm" color="gray.900">Jest</Text>
           </div>
         </SwiperSlide>
 
@@ -72,8 +107,15 @@ export function TecSkills() {
 
         <SwiperSlide>
           <div className="item">
-            <div className="icon"><img src="/skills/sass.png" alt="Sass" /></div>
-            <Text fontSize="sm" color="gray.900">Sass</Text>
+            <div className="icon"><img src="/skills/styled.png" alt="Styled" /></div>
+            <Text fontSize="sm" color="gray.900">Styled-components</Text>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="item">
+            <div className="icon"><img src="/skills/canva.png" alt="Canva" /></div>
+            <Text fontSize="sm" color="gray.900">Canva</Text>
           </div>
         </SwiperSlide>
       </Swiper>

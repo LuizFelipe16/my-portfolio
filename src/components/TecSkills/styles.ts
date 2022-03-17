@@ -15,17 +15,19 @@ export const TecSkillsStyles = styled.div`
 
   z-index: 100;
       
+  padding-top: 1rem;
   padding-left: 3rem;
   padding-right: 3rem;
 
   .swiper-skills {
     width: 100%;
+    padding-left: 3rem;
+    padding-bottom: 2rem;
   }
 
   .swiper-pagination {
     position: absolute;
     left: 45%;
-    bottom: -5px;
     text-align: center;
     transition: 300ms opacity;
     transform: translate3d(0, 0, 0);

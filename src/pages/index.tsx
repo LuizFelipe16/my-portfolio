@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Flex, Icon, Text } from "@chakra-ui/react";
 import Head from "next/head";
-import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import { FaQuoteLeft, FaQuoteRight, FaPenNib, FaFileCode } from "react-icons/fa";
 
 import { MenuButtons } from "../components/MenuButtons";
 import { Navigation } from "../components/Navigation";
@@ -79,7 +79,7 @@ function Home() {
           <h2>Ocupações Atuais</h2>
           <p className="text-info">FullStack Dev & Designer Freelancer</p>
 
-          <h2>Minhas Hard Skills</h2>
+          <h2>Hard Skills que mais utilizo</h2>
           <TecSkills />
         </div>
 
@@ -162,9 +162,23 @@ function Home() {
           </h2>
         </div>
         <div className="services">
-          <ItemService />
-          <ItemService />
-          <ItemService />
+          <ItemService
+            icon={FaFileCode}
+            title="Projetos Web"
+            text={`
+            Desenvolvimento de sites web profissionais, 
+            blogs, portfólios, landing pages, paginas 
+            institucionais e/ou de apresentação com responsividade em dispositivos mobile.
+            `}
+          />
+          <ItemService
+            icon={FaPenNib}
+            title="Designs & Criativos"
+            text={`
+            Crio designs de alta qualidade com neurodesign e neurocopy, intuitivos que 
+            prendem a atenção, para as mídias sociais, assim como criativos para anúncios online.
+            `}
+          />
         </div>
       </Services>
 

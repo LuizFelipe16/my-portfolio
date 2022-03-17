@@ -5,7 +5,8 @@ export const Skills = styled.div`
   min-height: 100vh;
   
   padding: 2rem;
-  padding-top: 6rem;
+  padding-top: 12rem;
+  padding-bottom: 4rem;
   background-color: var(--gray-100);
 
   flex-direction: row;

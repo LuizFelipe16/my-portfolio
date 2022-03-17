@@ -23,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
 
     --cyan-500: #48CDD0;
 
-    --swiper-navigation-size: 30px;
+    --swiper-navigation-size: 22px;
     --swiper-navigation-color: var(--cyan-500);
     
     --swiper-pagination-color: var(--cyan-500);
