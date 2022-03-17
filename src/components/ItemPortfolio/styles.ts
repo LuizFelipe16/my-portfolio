@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 export const ItemPortfolioStyle = styled.div`
   width: 25rem;
-  height: 23rem;
+  height: 30rem;
 
-  padding: 2rem;
-  opacity: 0.8;
+  padding: 1rem;
+
   background-color: var(--gray-900);
   border-color: var(--gray-900);
   border-width: 1px;
@@ -14,7 +14,7 @@ export const ItemPortfolioStyle = styled.div`
 
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1rem;
   
   transition: 1s !important;
@@ -44,15 +44,20 @@ export const ItemPortfolioStyle = styled.div`
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     font-family: 'Nunito', sans-serif;
     color: var(--cyan-500);
   }
   
-  p {
+  > p {
+    width: 100%;
+    height: 10rem;
+    overflow: hidden;
     font-family: 'Montserrat', sans-serif;
     color: var(--white);
-    line-height: 1.7rem;
+    font-size: 0.9rem;
+    font-weight: 200;
+    line-height: 1.5rem;
   }
 `;

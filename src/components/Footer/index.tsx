@@ -193,7 +193,7 @@ export function Footer() {
         align="center"
         justify="center"
       >
-        <Text fontFamily="JetBrains Mono" fontWeight="700" color="gray.900">created by @LuizFelipe | 2022</Text>
+        <Text fontFamily="JetBrains Mono" fontWeight="700" color="gray.900" fontSize="sm">created by @LuizFelipe | 2022</Text>
       </Flex>
     </>
   );

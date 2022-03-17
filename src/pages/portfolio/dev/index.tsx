@@ -74,25 +74,16 @@ export default function PortfolioDev() {
         <ListFolders>
           <ItemPortfolio
             title="MyMoon"
-            text="description"
-            animation="fade-right"
-            dur="1000"
-          />
-          <ItemPortfolio
-            title="MyMoon"
-            text="description"
-            animation="fade-right"
-            dur="1000"
-          />
-          <ItemPortfolio
-            title="MyMoon"
-            text="description"
-            animation="fade-right"
-            dur="1000"
-          />
-          <ItemPortfolio
-            title="MyMoon"
-            text="description"
+            text={`
+            Projeto mais complexo e completo, lidei com o máximo de bibliotecas que
+            aprendi durante o programa Ignite da Rocketseat, me importando muito com o
+            código e a organização do projeto. Implementei o controle de dados com
+            ReactHookForm, cache de dados com ReactQuery, autenticação de login com
+            NextAuth, validação dos formulários com Yup, estilização com Styled
+            Components, design system ChakraUI e RadixUI, banco de dados FaunaDB,
+            mini blog com PrismicCMS, testes unitários com Jest e Testing Library e
+            estratégias para melhorar a performance da aplicação.            
+            `}
             animation="fade-right"
             dur="1000"
           />
