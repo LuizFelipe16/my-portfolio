@@ -1,19 +1,20 @@
 import { Button } from '@chakra-ui/react';
 import Link from 'next/link';
-import { ItemPortfolioFolderStyle } from './styles';
+import { ItemPortfolioStyle } from './styles';
 
-interface IItemPortfolioFolderProps {
+interface IItemPortfolioProps {
   title: string;
   text: string;
 
   animation: string;
+  dur: string;
 }
 
-export function ItemPortfolioFolder({ text, title, animation }: IItemPortfolioFolderProps) {
+export function ItemPortfolio({ text, title, animation, dur }: IItemPortfolioProps) {
   return (
-    <ItemPortfolioFolderStyle
+    <ItemPortfolioStyle
       data-aos={animation}
-      data-aos-duration="1000"
+      data-aos-duration={dur}
     >
       <h1>{title}</h1>
       <p>{text}</p>
@@ -35,6 +36,6 @@ export function ItemPortfolioFolder({ text, title, animation }: IItemPortfolioFo
           Ver Portfólio
         </Button>
       </Link>
-    </ItemPortfolioFolderStyle>
+    </ItemPortfolioStyle>
   );
 }
