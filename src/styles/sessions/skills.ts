@@ -7,7 +7,7 @@ export const Skills = styled.div`
   padding: 2rem;
   padding-top: 12rem;
   padding-bottom: 4rem;
-  background-color: var(--gray-100);
+  background-color: var(--gray-200);
 
   flex-direction: row;
   align-items: flex-start;

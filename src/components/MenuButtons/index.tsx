@@ -3,13 +3,13 @@ import { Button, Icon } from "@chakra-ui/react";
 import { animateScroll } from 'react-scroll';
 
 import { BsFillGearFill, BsArrowUpShort } from 'react-icons/bs';
-import { IoMdClose, IoIosArrowUp } from 'react-icons/io';
+import { IoMdClose } from 'react-icons/io';
 import { AiFillLinkedin, AiOutlineInstagram, AiFillGithub } from 'react-icons/ai';
 
 import { MenuTools } from "./styles";
 
 export function MenuButtons() {
-  const [isMenu, setIsMenu] = useState(false);
+  const [isMenu, setIsMenu] = useState(true);
   const handleOnOpenOrCloseMenu = () => setIsMenu(!isMenu);
 
   return (

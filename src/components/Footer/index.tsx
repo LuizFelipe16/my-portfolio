@@ -4,6 +4,8 @@ import { scrollAnimationToSessionPageById } from "../../utils/scrollAnimationToS
 import { Textarea } from "../Form/AreaText";
 import { Input } from "../Form/Input";
 
+import { Link } from './styles';
+
 export function Footer() {
   const [name, setName] = useState('');
   const [subject, setSubject] = useState('');
@@ -129,10 +131,10 @@ export function Footer() {
           >
             Menu
           </Heading>
-          <Text as="button" onClick={() => scrollAnimationToSessionPageById('about')}>Quem sou</Text>
-          <Text as="button" onClick={() => scrollAnimationToSessionPageById('services')}>O que faço</Text>
-          <Text as="button" onClick={() => scrollAnimationToSessionPageById('portfolio')}>Portfólio</Text>
-          <Text as="button" onClick={() => scrollAnimationToSessionPageById('contact')}>Fale comigo</Text>
+          <Link onClick={() => scrollAnimationToSessionPageById('about')}>Quem sou</Link>
+          <Link onClick={() => scrollAnimationToSessionPageById('services')}>O que faço</Link>
+          <Link onClick={() => scrollAnimationToSessionPageById('portfolio')}>Portfólio</Link>
+          <Link onClick={() => scrollAnimationToSessionPageById('contact')}>Fale comigo</Link>
         </VStack>
         <VStack
           w="33%"
@@ -183,6 +185,15 @@ export function Footer() {
         </VStack>
 
         <Image src="/robot-happy.gif" h="20rem" />
+      </Flex>
+      <Flex
+        w="100vw"
+        h="8vh"
+        bg="cyan.500"
+        align="center"
+        justify="center"
+      >
+        <Text fontFamily="JetBrains Mono" fontWeight="700" color="gray.900">created by @LuizFelipe | 2022</Text>
       </Flex>
     </>
   );
