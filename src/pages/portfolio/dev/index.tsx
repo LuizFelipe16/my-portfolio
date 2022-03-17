@@ -5,7 +5,7 @@ import { FaLongArrowAltLeft } from "react-icons/fa";
 import { Footer } from "../../../components/Footer";
 import { ItemPortfolio } from "../../../components/ItemPortfolio";
 import { MenuButtons } from "../../../components/MenuButtons";
-import { ListFolders } from "./styles";
+import { ListFolders } from "../../../styles/sessions/portfolios";
 
 export default function PortfolioDev() {
   return (
