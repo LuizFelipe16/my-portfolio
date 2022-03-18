@@ -3,17 +3,16 @@ import Head from "next/head";
 
 import { Footer } from "../../../components/Footer";
 import { HeaderPortfolio } from "../../../components/HeaderPortfolio";
-import { ItemPortfolio } from "../../../components/ItemPortfolio";
+import { ItemPortfolioDesign } from "../../../components/ItemPortfolio/design";
 import { MenuButtons } from "../../../components/MenuButtons";
-
-import { projects } from "../../../services/projects";
+import { designs } from "../../../services/designs";
 
 import { ListFolders } from "../../../styles/sessions/portfolios";
 
-export default function PortfolioDev() {
+export default function PortfolioDesign() {
   return (
     <>
-      <Head><title>Portfólio Dev | Luiz Felipe</title></Head>
+      <Head><title>Portfólio Design | Luiz Felipe</title></Head>
       <MenuButtons isMenuOpen={false} />
       <Stack
         w="100vw"
@@ -23,18 +22,19 @@ export default function PortfolioDev() {
         align="center"
         justify="flex-start"
       >
-        <HeaderPortfolio title="Projetos Web" />
+        <HeaderPortfolio title="Designs" />
 
         <ListFolders>
-          {projects.map(project => (
-            <ItemPortfolio
-              key={project.id}
-              project={project}
+          {designs.map(design => (
+            <ItemPortfolioDesign
+              key={design.id}
+              design={design}
               animation="fade-right"
               dur="1000"
             />
           ))}
         </ListFolders>
+
         <Text fontFamily="Montserrat" color="gray.200">Mais projetos estão sendo adicionados...</Text>
         <Footer />
       </Stack>

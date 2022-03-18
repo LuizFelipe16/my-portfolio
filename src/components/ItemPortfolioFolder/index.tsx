@@ -5,11 +5,12 @@ import { ItemPortfolioFolderStyle } from './styles';
 interface IItemPortfolioFolderProps {
   title: string;
   text: string;
+  href: string;
 
   animation: string;
 }
 
-export function ItemPortfolioFolder({ text, title, animation }: IItemPortfolioFolderProps) {
+export function ItemPortfolioFolder({ text, title, animation, href }: IItemPortfolioFolderProps) {
   return (
     <ItemPortfolioFolderStyle
       data-aos={animation}
@@ -18,7 +19,7 @@ export function ItemPortfolioFolder({ text, title, animation }: IItemPortfolioFo
       <h1>{title}</h1>
       <p>{text}</p>
 
-      <Link href="/portfolio/dev" passHref>
+      <Link href={href} passHref>
         <Button
           as="a"
           w="100%"

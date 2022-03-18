@@ -20,8 +20,8 @@ export function ItemPortfolio({ project, animation, dur }: IItemPortfolioProps) 
   return (
     <>
       <ItemPortfolioStyle
-      // data-aos={animation}
-      // data-aos-duration={dur}
+        data-aos={animation}
+        data-aos-duration={dur}
       >
         <Image w="100%" h="10rem" src={`/assets/${project.banner}`} objectFit="cover" borderRadius="lg" />
         <h1>{project.title}</h1>

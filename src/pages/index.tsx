@@ -196,11 +196,13 @@ function Home() {
             animation="fade-right"
             title="Mais de 35 Projetos desenvolvidos"
             text="Sites, Lading Pages, Plataformas, Sites Institucionais e mais"
+            href="/portfolio/dev"
           />
           <ItemPortfolioFolder
             animation="fade-left"
             title="Mais de 70 Artes publicadas"
             text="Brandings, Carrosseis, Posts Únicos, Artes de Anúncios para Redes Sociais e mais"
+            href="/portfolio/design"
           />
         </div>
       </Portfolio>
