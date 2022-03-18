@@ -8,8 +8,12 @@ import { AiFillLinkedin, AiOutlineInstagram, AiFillGithub } from 'react-icons/ai
 
 import { MenuTools } from "./styles";
 
-export function MenuButtons() {
-  const [isMenu, setIsMenu] = useState(true);
+interface IMenuButtonProps {
+  isMenuOpen?: boolean;
+}
+
+export function MenuButtons({ isMenuOpen = true }: IMenuButtonProps) {
+  const [isMenu, setIsMenu] = useState(isMenuOpen);
   const handleOnOpenOrCloseMenu = () => setIsMenu(!isMenu);
 
   return (

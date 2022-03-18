@@ -10,6 +10,6 @@ export const ListFolders = styled.div`
   gap: 1rem;
 
   margin-top: -2rem !important;
+  margin-bottom: 5rem !important;
   z-index: 100;
-
 `;

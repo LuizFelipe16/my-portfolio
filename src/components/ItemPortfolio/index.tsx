@@ -3,14 +3,18 @@ import { ModalViewProject } from '../Modal/ViewProject';
 import { ItemPortfolioStyle } from './styles';
 
 interface IItemPortfolioProps {
-  title: string;
-  text: string;
+  project: {
+    title: string;
+    description: string;
+    banner: string;
+    link: string;
+  }
 
   animation: string;
   dur: string;
 }
 
-export function ItemPortfolio({ text, title, animation, dur }: IItemPortfolioProps) {
+export function ItemPortfolio({ project, animation, dur }: IItemPortfolioProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -19,9 +23,9 @@ export function ItemPortfolio({ text, title, animation, dur }: IItemPortfolioPro
       // data-aos={animation}
       // data-aos-duration={dur}
       >
-        <Image w="100%" h="10rem" src="/assets/my-moon.png" objectFit="cover" borderRadius="lg" />
-        <h1>{title}</h1>
-        <p>{text}</p>
+        <Image w="100%" h="10rem" src={`/assets/${project.banner}`} objectFit="cover" borderRadius="lg" />
+        <h1>{project.title}</h1>
+        <p>{project.description}</p>
 
         <Button
           onClick={onOpen}
@@ -39,6 +43,8 @@ export function ItemPortfolio({ text, title, animation, dur }: IItemPortfolioPro
         </Button>
         <Button
           as="a"
+          href={project.link}
+          target="_blank"
           w="100%"
           borderRadius="full"
           bg="cyan.500"
@@ -52,7 +58,7 @@ export function ItemPortfolio({ text, title, animation, dur }: IItemPortfolioPro
           Acessar
         </Button>
       </ItemPortfolioStyle>
-      <ModalViewProject isOpen={isOpen} onClose={onClose} />
+      <ModalViewProject isOpen={isOpen} onClose={onClose} project={project} />
     </>
   );
 }

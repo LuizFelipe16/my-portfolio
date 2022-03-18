@@ -2,16 +2,20 @@ import { Box, Heading, Icon, Stack, Tooltip, Text } from "@chakra-ui/react";
 import Head from "next/head";
 import Link from "next/link";
 import { FaLongArrowAltLeft } from "react-icons/fa";
+
 import { Footer } from "../../../components/Footer";
 import { ItemPortfolio } from "../../../components/ItemPortfolio";
 import { MenuButtons } from "../../../components/MenuButtons";
+
+import { projects } from "../../../services/projects";
+
 import { ListFolders } from "../../../styles/sessions/portfolios";
 
 export default function PortfolioDev() {
   return (
     <>
       <Head><title>Portfólio Dev | Luiz Felipe</title></Head>
-      <MenuButtons />
+      <MenuButtons isMenuOpen={false} />
       <Stack
         w="100vw"
         minH="100vh"
@@ -72,21 +76,14 @@ export default function PortfolioDev() {
         </Stack>
 
         <ListFolders>
-          <ItemPortfolio
-            title="MyMoon"
-            text={`
-            Projeto mais complexo e completo, lidei com o máximo de bibliotecas que
-            aprendi durante o programa Ignite da Rocketseat, me importando muito com o
-            código e a organização do projeto. Implementei o controle de dados com
-            ReactHookForm, cache de dados com ReactQuery, autenticação de login com
-            NextAuth, validação dos formulários com Yup, estilização com Styled
-            Components, design system ChakraUI e RadixUI, banco de dados FaunaDB,
-            mini blog com PrismicCMS, testes unitários com Jest e Testing Library e
-            estratégias para melhorar a performance da aplicação.            
-            `}
-            animation="fade-right"
-            dur="1000"
-          />
+          {projects.map(project => (
+            <ItemPortfolio
+              key={project.id}
+              project={project}
+              animation="fade-right"
+              dur="1000"
+            />
+          ))}
         </ListFolders>
         <Footer />
       </Stack>
