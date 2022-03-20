@@ -44,4 +44,17 @@ export const Services = styled.div`
     justify-content: center;
     gap: 2rem;
   }
+
+  @media (min-width: 200px) and (max-width: 980px) {
+    & {
+      background-image: none;
+
+      padding: 2rem;
+      gap: 2rem;
+
+      .services {
+        flex-direction: column;
+      }
+    }
+  }
 `;

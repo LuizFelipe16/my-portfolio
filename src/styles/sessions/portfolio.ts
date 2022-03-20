@@ -13,7 +13,6 @@ export const Portfolio = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  /* gap: 2rem; */
 
   > div {
     flex-direction: column;
@@ -43,5 +42,22 @@ export const Portfolio = styled.div`
     align-items: center;
     justify-content: center;
     gap: 2rem;
+  }
+
+  @media (min-width: 200px) and (max-width: 980px) {
+    & {
+      gap: 1rem;
+
+      > div {
+        margin-top: 3rem;
+      }
+
+      .portfolios{
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+        flex-direction: column;
+      }
+    }
   }
 `;

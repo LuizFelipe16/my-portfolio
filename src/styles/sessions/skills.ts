@@ -60,4 +60,20 @@ export const Skills = styled.div`
       }
     }
   }
+
+  @media (min-width: 200px) and (max-width: 980px) {
+    & {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 8rem;
+
+      h1 {
+        position: static;
+      }
+    }
+
+    .line {
+      display: none;
+    }
+  }
 `;

@@ -85,4 +85,34 @@ export const Welcome = styled.main`
       }
     }
   }
+
+  @media (min-width: 200px) and (max-width: 980px) {
+    & {
+      background-image: none;
+      
+      .d-element {
+        display: none;
+        position: relative;
+      }
+      
+      .content {
+        /* padding-left: 2rem; */
+        width: 100%;
+        position: relative;
+
+        > h1 {
+          font-size: 1rem;
+        }
+
+        @keyframes typing {
+          from {
+            width: 0;
+          }
+          to {
+            width: 70%;
+          }
+        } 
+      }
+    }
+  }
 `;

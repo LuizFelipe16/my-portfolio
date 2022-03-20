@@ -147,4 +147,55 @@ export const About = styled.div`
       font-size: 1rem;
     }
   }
+
+  @media (min-width: 200px) and (max-width: 980px) {
+    & {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-bottom: 8rem;
+
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+
+      > img {
+        position: static;
+        animation: none;
+        right: none;
+      }
+
+      .infos {
+        width: 100%;
+        border: 1px solid red;
+        align-items: center;
+        margin-left: none;
+        padding-left: none;
+        display: none;
+
+        > div {
+          text-align: center;
+        }
+
+        .tec-skills {
+          height: auto;
+          flex-direction: column !important;
+        }
+
+        .quote {
+          display: none;
+        }
+      }
+
+      .about {
+        width: 100%;
+        border: 1px solid red;
+        padding-left: none;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        display: none;
+      }
+    }
+  }
 `;

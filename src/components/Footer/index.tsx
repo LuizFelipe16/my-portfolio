@@ -1,4 +1,4 @@
-import { Stack, Text, Heading, VStack, Button, Flex, Image } from "@chakra-ui/react";
+import { Stack, Text, Heading, VStack, Button, Flex, Image, useBreakpointValue } from "@chakra-ui/react";
 import { FormEvent, useState } from "react";
 import { scrollAnimationToSessionPageById } from "../../utils/scrollAnimationToSessionPageById";
 import { Textarea } from "../Form/AreaText";
@@ -10,6 +10,11 @@ export function Footer() {
   const [name, setName] = useState('');
   const [subject, setSubject] = useState('');
   const [email, setEmail] = useState('');
+
+  const isWideVersionBreakLayoutMobile = useBreakpointValue({
+    base: true,
+    lg: false,
+  });
 
   function sendMessage(e: FormEvent): void {
     e.preventDefault();
@@ -52,6 +57,7 @@ export function Footer() {
             color="gray.100"
             fontWeight="100"
             fontFamily="Nunito"
+            textAlign="center"
           >
             se você ficou com alguma dúvida, preencha os campos abaixo e
             clique em enviar que entrarei em contato o mais rápido possível.
@@ -59,20 +65,20 @@ export function Footer() {
         </VStack>
 
         <VStack as="form" onSubmit={sendMessage} w="80%" spacing="9">
-          <Stack w="100%" direction="row" spacing="4">
+          <Stack w="100%" direction={["column", "column", "row"]} spacing="4">
             <Input
               value={name}
               onChange={e => setName(e.target.value)}
               name="name"
               text="Seu Nome"
-              w="50%"
+              w={["100%", "100%", "50%"]}
             />
             <Input
               value={email}
               onChange={e => setEmail(e.target.value)}
               name="email"
               text="Seu Melhor E-mail"
-              w="50%"
+              w={["100%", "100%", "50%"]}
             />
             {/* <Input name="phone" text="Telefone de Contato" w="25%" /> */}
           </Stack>
@@ -107,22 +113,22 @@ export function Footer() {
         minH="70vh"
         bg="gray.900"
         px="20"
+        py={["7", "7", "2"]}
 
-        direction="row"
+        direction={["column", "column", "row"]}
         align="center"
       >
-
         <VStack
-          w="33%"
+          w={["33%", "100%"]}
           h="80%"
           p="10"
           spacing="6"
           color="gray.100"
           fontFamily="Montserrat"
-          align="flex-start"
-          justify="flex-start"
+          align={["center", "center", "flex-start"]}
+          justify={["center", "center", "flex-start"]}
           borderColor="gray.800"
-          borderLeftWidth={2}
+          borderLeftWidth={[0, 0, 2]}
         >
           <Heading
             color="cyan.500"
@@ -137,16 +143,16 @@ export function Footer() {
           <Link onClick={() => scrollAnimationToSessionPageById('contact')}>Fale comigo</Link>
         </VStack>
         <VStack
-          w="33%"
+          w={["100%", "100%", "33%"]}
           h="80%"
           p="10"
           spacing="6"
           color="gray.100"
           fontFamily="Montserrat"
-          align="flex-start"
-          justify="flex-start"
+          align={["center", "center", "flex-start"]}
+          justify={["center", "center", "flex-start"]}
           borderColor="gray.800"
-          borderLeftWidth={2}
+          borderLeftWidth={[0, 0, 2]}
         >
           <Heading
             color="cyan.500"
@@ -162,16 +168,16 @@ export function Footer() {
           <Text as="a" href="https://www.instagram.com/luiz_2fs/" target="_blank">Instagram</Text>
         </VStack>
         <VStack
-          w="33%"
+          w={["100%", "100%", "33%"]}
           h="80%"
           p="10"
           spacing="6"
           color="gray.100"
           fontFamily="Montserrat"
-          align="flex-start"
-          justify="flex-start"
+          align={["center", "center", "flex-start"]}
+          justify={["center", "center", "flex-start"]}
           borderColor="gray.800"
-          borderLeftWidth={2}
+          borderLeftWidth={[0, 0, 2]}
         >
           <Heading
             color="cyan.500"
@@ -184,7 +190,7 @@ export function Footer() {
           <Text>felipefelizatti215@gmail.com</Text>
         </VStack>
 
-        <Image src="/robot-happy.gif" h="20rem" />
+        {!isWideVersionBreakLayoutMobile && <Image src="/robot-happy.gif" h="20rem" />}
       </Flex>
       <Flex
         w="100vw"
