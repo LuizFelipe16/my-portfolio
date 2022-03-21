@@ -59,5 +59,13 @@ export const projects: Project[] = [
     link: 'https://myheart-orpin.vercel.app',
     description: 'Uma plataforma web, desenvolvida especialmente como um presente muito importante, porém foi um ótimo projeto, desenvolvido com muita cautela no design, nas animações dentro da plataforma, sendo algo simples mas elegante, para surpreendar a pessoa que tem acesso. Falando dos aspectos técnicos, ele foi desenvolvido em TypeScript, usando ReactJS e NextJS, animações com Animate e CSSHake, estilização com Sass e usando o Design System ChakraUI',
     access: true
-  }
+  },
+  {
+    id: 7,
+    title: 'CyberNegócios',
+    banner: 'cybernegocios.png',
+    link: 'https://cybernegocio.com.br',
+    description: 'Site de apresentação de empresa e um site institucional, com todo o layout responsivo com outros dispositivos, além de simples e moderno, objetivo e claro na comunicação, além de um domínio próprio totalmente configurado por mim com SSL e DNS, um verdadeiro e completo site para uma empresa se posicionar no ambiente online. Falando do que está por dentro do projeto, ele foi desenvolvido em TypeScript com ReactJS e NextJS, usando os recursos dessas tecnologias para integrar um Blog moderno com Prismic CMS e sessão de comentários.',
+    access: true
+  },
 ];
