@@ -8,6 +8,12 @@ type Design = {
 
 export const designs: Design[] = [
   {
+    id: 0,
+    title: 'Criativo Café',
+    banner: 'cafe.png',
+    size: 'large'
+  },
+  {
     id: 1,
     title: 'Criativo Disk Pizza',
     banner: 'disk-pizza.png',
@@ -15,14 +21,14 @@ export const designs: Design[] = [
   },
   {
     id: 2,
-    title: 'Criativo Corte de Cabelo',
-    banner: 'corte-cabelo.png',
+    title: 'Criativo Combo de Lanche',
+    banner: 'combo-lanche.png',
     size: 'normal'
   },
   {
     id: 3,
-    title: 'Criativo Combo de Lanche',
-    banner: 'combo-lanche.png',
+    title: 'Criativo Corte de Cabelo',
+    banner: 'corte-cabelo.png',
     size: 'normal'
   },
   {
