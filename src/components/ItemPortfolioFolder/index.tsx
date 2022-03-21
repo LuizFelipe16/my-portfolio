@@ -14,7 +14,7 @@ export function ItemPortfolioFolder({ text, title, animation, href }: IItemPortf
   return (
     <ItemPortfolioFolderStyle
       data-aos={animation}
-      data-aos-duration="1000"
+      data-aos-duration="3000"
     >
       <h1>{title}</h1>
       <p>{text}</p>

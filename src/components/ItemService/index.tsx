@@ -15,7 +15,7 @@ export function ItemService({ mt, title, text, icon }: IItemServiceProps) {
   return (
     <ItemServiceStyle
       data-aos="flip-down"
-      data-aos-duration="2000"
+      data-aos-duration="3000"
     >
       <Icon as={icon} color="cyan.500" fontSize="4rem" />
       <br />

@@ -119,7 +119,7 @@ export function Footer() {
         align="center"
       >
         <VStack
-          w={["33%", "100%"]}
+          w={["100%", "100%", "33%"]}
           h="80%"
           p="10"
           spacing="6"
