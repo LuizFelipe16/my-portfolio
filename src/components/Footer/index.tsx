@@ -38,7 +38,7 @@ export function Footer() {
         bg="gray.900"
         bgImage="/images/footer-bg.png"
         objectFit="cover"
-        p="8"
+        p={["5", "7", "8"]}
         pb="14"
         direction="column"
         align="center"
@@ -64,7 +64,7 @@ export function Footer() {
           </Text>
         </VStack>
 
-        <VStack as="form" onSubmit={sendMessage} w="80%" spacing="9">
+        <VStack as="form" onSubmit={sendMessage} w={["100%", "90%", "80%"]} spacing="9">
           <Stack w="100%" direction={["column", "column", "row"]} spacing="4">
             <Input
               value={name}
@@ -178,6 +178,7 @@ export function Footer() {
           justify={["center", "center", "flex-start"]}
           borderColor="gray.800"
           borderLeftWidth={[0, 0, 2]}
+          textAlign={["center", "center", "start"]}
         >
           <Heading
             color="cyan.500"

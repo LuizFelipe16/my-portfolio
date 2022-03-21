@@ -9,23 +9,12 @@ export const Welcome = styled.main`
 
   position: relative;
 
-  .d-element {
+  .img-d-element {
     background: transparent;
     position: absolute;
     object-fit: cover;
     left: 60px;
     top: 100px;
-  }
-
-  .back-video {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
   }
 
   .content {
@@ -88,17 +77,25 @@ export const Welcome = styled.main`
 
   @media (min-width: 200px) and (max-width: 980px) {
     & {
-      background-image: none;
+      /* background-image: none; */
+      background-image: url('/images/welcome-bg.png');
       
-      .d-element {
+      .img-d-element {
         display: none;
-        position: relative;
+        /* position: relative; */
+        left: 70px;
+        top: 40px;
+        width: 31rem;
       }
       
       .content {
-        /* padding-left: 2rem; */
+        /* margin-top: 15rem; */
+        /* padding-left: 3rem; */
         width: 100%;
         position: relative;
+
+        justify-content: center;
+        align-items: center;
 
         > h1 {
           font-size: 1rem;
@@ -109,10 +106,22 @@ export const Welcome = styled.main`
             width: 0;
           }
           to {
-            width: 70%;
+            width: 65%;
           }
         } 
       }
     }
   }
 `;
+
+
+// .back-video {
+//   position: absolute;
+//   right: 0;
+//   bottom: 0;
+//   min-width: 100%;
+//   min-height: 100%;
+//   width: auto;
+//   height: auto;
+//   z-index: -100;
+// }

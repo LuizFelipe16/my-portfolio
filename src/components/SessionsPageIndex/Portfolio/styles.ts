@@ -14,9 +14,10 @@ export const Portfolio = styled.div`
   align-items: center;
   justify-content: space-evenly;
 
-  > div {
+  div.header-title {
     flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: 0.5rem;
 
     > h1 {

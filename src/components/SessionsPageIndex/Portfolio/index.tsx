@@ -1,11 +1,17 @@
+import { useBreakpointValue } from "@chakra-ui/react";
 import { ItemPortfolioFolder } from "../../../components/ItemPortfolioFolder";
 
-import { Portfolio } from "../../../styles/sessions/portfolio";
+import { Portfolio } from "./styles";
 
 export function SessionPortfolio() {
+  const isMobileVersion = useBreakpointValue({
+    base: true,
+    lg: false,
+  });
+
   return (
     <Portfolio id="portfolio">
-      <div>
+      <div className="header-title">
         <h1>
           Meu Portfólio
         </h1>
@@ -21,7 +27,7 @@ export function SessionPortfolio() {
           href="/portfolio/dev"
         />
         <ItemPortfolioFolder
-          animation="fade-left"
+          animation={!!isMobileVersion ? "fade-right" : "fade-left"}
           title="Mais de 70 Artes publicadas"
           text="Brandings, Carrosseis, Posts Únicos, Artes de Anúncios para Redes Sociais e mais"
           href="/portfolio/design"
