@@ -35,7 +35,7 @@ export default function PortfolioDesign() {
           ))}
         </ListFolders>
 
-        <Text fontFamily="Montserrat" color="gray.200">Mais projetos estão sendo adicionados...</Text>
+        <Text fontFamily="Montserrat" color="gray.200">Mais artes e designs estão sendo adicionados...</Text>
         <Footer />
       </Stack>
     </>
