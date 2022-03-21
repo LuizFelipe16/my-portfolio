@@ -2,7 +2,7 @@ import { FaPenNib, FaFileCode } from "react-icons/fa";
 
 import { ItemService } from "../../../components/ItemService";
 
-import { Services } from "../../../styles/sessions/services";
+import { Services } from "./styles";
 
 export function SessionServices() {
   return (

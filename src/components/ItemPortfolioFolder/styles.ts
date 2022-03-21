@@ -56,7 +56,7 @@ export const ItemPortfolioFolderStyle = styled.div`
 
   @media (min-width: 200px) and (max-width: 980px) {
     & {
-      width: 20rem;
+      width: 95%;
       height: auto;
     }
   }

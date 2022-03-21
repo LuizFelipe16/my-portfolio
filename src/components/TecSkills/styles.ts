@@ -94,6 +94,11 @@ export const TecSkillsStyles = styled.div`
         justify-self: center;
         margin-left: 6rem;
         margin-bottom: 2rem;
+
+        .icon {
+          width: 8rem;
+          height: 8rem;
+        }
       }
 
       .swiper-pagination {

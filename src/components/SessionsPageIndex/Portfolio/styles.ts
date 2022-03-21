@@ -28,6 +28,7 @@ export const Portfolio = styled.div`
     }
 
     > h2 {
+      width: 95%;
       font-family: 'Nunito', sans-serif;
       color: var(--gray-100);
       font-weight: 100;
