@@ -15,7 +15,7 @@ export const ItemServiceStyle = styled.div`
   justify-content: center;
   gap: 1rem;
   
-  transition: 1s !important;
+  transition: 2s !important;
   animation: blinker_neon 4s infinite both;
   
   &:hover {

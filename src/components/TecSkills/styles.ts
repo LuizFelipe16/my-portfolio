@@ -92,12 +92,12 @@ export const TecSkillsStyles = styled.div`
       .item {
         align-self: center;
         justify-self: center;
-        margin-left: 6rem;
+        margin-left: 7rem;
         margin-bottom: 2rem;
 
         .icon {
-          width: 8rem;
-          height: 8rem;
+          width: 10rem;
+          height: 10rem;
         }
       }
 
