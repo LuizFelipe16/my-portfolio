@@ -106,7 +106,7 @@ export const Welcome = styled.main`
             width: 0;
           }
           to {
-            width: 65%;
+            width: 100%;
           }
         } 
       }

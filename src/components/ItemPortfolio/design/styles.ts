@@ -53,4 +53,11 @@ export const ItemPortfolioStyle = styled.div`
       border-color: var(--gray-900);
     }
   }
+
+  @media (min-width: 200px) and (max-width: 980px) {
+    & {
+      width: 100%;
+      height: auto;
+    }
+  }
 `;

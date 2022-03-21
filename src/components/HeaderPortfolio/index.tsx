@@ -24,8 +24,8 @@ export function HeaderPortfolio({ title }: IHeaderPortfolioProps) {
           h="auto"
           p="3"
           position="absolute"
-          left="40px"
-          top="45%"
+          left={["20px", "20px", "40px"]}
+          top={["20%", "20%", "45%"]}
           cursor="pointer"
           borderRadius="full"
           transition="0.2s"

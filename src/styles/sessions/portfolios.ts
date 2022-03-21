@@ -12,4 +12,11 @@ export const ListFolders = styled.div`
   margin-top: -2rem !important;
   margin-bottom: 5rem !important;
   z-index: 100;
+
+  @media (min-width: 200px) and (max-width: 980px) {
+    & {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
 `;

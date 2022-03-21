@@ -60,4 +60,11 @@ export const ItemPortfolioStyle = styled.div`
     font-weight: 200;
     line-height: 1.5rem;
   }
+
+  @media (min-width: 200px) and (max-width: 980px) {
+    & {
+      width: 100%;
+      height: auto;
+    }
+  }
 `;

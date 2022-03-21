@@ -16,7 +16,7 @@ export function Loading() {
       </Text>
       <Progress
         mt="1.2rem"
-        w="40rem"
+        w={["95%", "95%", "40rem"]}
         size="sm"
         colorScheme="gray"
         bg="gray.800"
