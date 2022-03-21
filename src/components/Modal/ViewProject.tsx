@@ -38,6 +38,7 @@ export function ModalViewProject({ isOpen, onClose, project }: IModalViewProject
             color="gray.900"
             onClick={onClose}
             borderRadius="full"
+            fontFamily="Montserrat"
             bg="cyan.500"
             size="md"
             transition="0.2s"

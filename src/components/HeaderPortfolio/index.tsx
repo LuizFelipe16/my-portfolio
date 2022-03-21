@@ -1,4 +1,4 @@
-import { Box, Heading, Icon, Stack, Text, Tooltip } from "@chakra-ui/react";
+import { Box, Heading, Icon, Stack, Text, Tooltip, VStack } from "@chakra-ui/react";
 import Link from "next/link";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 
@@ -47,16 +47,18 @@ export function HeaderPortfolio({ title }: IHeaderPortfolioProps) {
         </Text>
       </Tooltip>
 
-      <Box data-aos="fade-down" data-aos-duration="1500">
+      <VStack fontFamily="Montserrat" data-aos="fade-down" data-aos-duration="1500">
         <Heading
           fontSize="2xl"
-          fontFamily="Montserrat"
           fontWeight="500"
           color="gray.900"
         >
           {title}
         </Heading>
-      </Box>
+        <Text fontSize="sm">
+          Continue rolando para baixo para ver mais
+        </Text>
+      </VStack>
     </Stack>
   );
 }

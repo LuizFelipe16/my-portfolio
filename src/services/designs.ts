@@ -8,12 +8,6 @@ type Design = {
 
 export const designs: Design[] = [
   {
-    id: 0,
-    title: 'Criativo Café',
-    banner: 'cafe.png',
-    size: 'large'
-  },
-  {
     id: 1,
     title: 'Criativo Disk Pizza',
     banner: 'disk-pizza.png',
@@ -192,5 +186,47 @@ export const designs: Design[] = [
     title: 'Criativo Feliz Natal',
     banner: 'feliz-natal.png',
     size: 'large'
+  },
+  {
+    id: 31,
+    title: 'Criativo Café',
+    banner: 'cafe.png',
+    size: 'large'
+  },
+  {
+    id: 32,
+    title: 'Post Carrossel Instagram Mudar Conteúdo',
+    banner: 'lz-mudar-conteudo.png',
+    size: 'normal'
+  },
+  {
+    id: 33,
+    title: 'Post Carrossel Instagram Game Rede Social',
+    banner: 'lz-game-rede.png',
+    size: 'normal'
+  },
+  {
+    id: 34,
+    title: 'Post Carrossel Instagram Frases',
+    banner: 'lz-frases.png',
+    size: 'normal'
+  },
+  {
+    id: 35,
+    title: 'Post Carrossel Instagram Priming',
+    banner: 'lz-priming.png',
+    size: 'normal'
+  },
+  {
+    id: 36,
+    title: 'Post Carrossel Instagram Steve Jobs',
+    banner: 'lz-steve.png',
+    size: 'normal'
+  },
+  {
+    id: 37,
+    title: 'Post Carrossel Instagram Halo',
+    banner: 'lz-halo.png',
+    size: 'normal'
   },
 ];
