@@ -151,6 +151,7 @@ export function Footer() {
           fontFamily="Montserrat"
           align={["center", "center", "flex-start"]}
           justify={["center", "center", "flex-start"]}
+          textAlign={["center", "center", "start"]}
           borderColor="gray.800"
           borderLeftWidth={[0, 0, 2]}
         >

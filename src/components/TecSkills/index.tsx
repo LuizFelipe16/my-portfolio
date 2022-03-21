@@ -1,4 +1,4 @@
-import { Text } from "@chakra-ui/react";
+import { Text, useBreakpointValue } from "@chakra-ui/react";
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -11,12 +11,17 @@ import 'swiper/css/autoplay';
 import { TecSkillsStyles } from './styles';
 
 export function TecSkills() {
+  const isMobileVersion = useBreakpointValue({
+    base: true,
+    lg: false,
+  });
+
   return (
     <TecSkillsStyles>
       <Swiper
         className="swiper-skills"
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        slidesPerView={7}
+        slidesPerView={!!isMobileVersion ? 1 : 7}
         navigation
         autoplay
         pagination={{ clickable: true }}

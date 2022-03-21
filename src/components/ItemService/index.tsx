@@ -17,7 +17,7 @@ export function ItemService({ mt, title, text, icon }: IItemServiceProps) {
       data-aos="flip-down"
       data-aos-duration="3000"
     >
-      <Icon as={icon} color="cyan.500" fontSize="4rem" />
+      <Icon as={icon} color="cyan.500" fontSize={["3rem", "3rem", "4rem"]} />
       <br />
       <h1>{title}</h1>
       <p>{text}</p>

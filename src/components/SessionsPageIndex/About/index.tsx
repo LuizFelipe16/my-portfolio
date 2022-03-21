@@ -1,11 +1,16 @@
-import { Icon } from "@chakra-ui/react";
+import { Icon, useBreakpointValue } from "@chakra-ui/react";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 import { TecSkills } from "../../../components/TecSkills";
 
-import { About } from "../../../styles/sessions/about";
+import { About } from "./styles";
 
 export function SessionAbout() {
+  const isMobileVersion = useBreakpointValue({
+    base: true,
+    lg: false,
+  });
+
   return (
     <About id="about">
       <div className="infos">
@@ -30,7 +35,7 @@ export function SessionAbout() {
 
       <img src="/images/eu.jpeg" alt="Luiz Felipe" />
 
-      <div data-aos="zoom-in-left" data-aos-duration="1000" className="about">
+      <div data-aos={!!isMobileVersion ? "zoom-in-right" : "zoom-in-left"} data-aos-duration="1000" className="about">
         <h1>Olá,</h1>
         <p>
           me chamo luiz, desenvolvedor fullStack,

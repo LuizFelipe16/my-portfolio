@@ -53,4 +53,11 @@ export const ItemPortfolioFolderStyle = styled.div`
     color: var(--white);
     line-height: 1.7rem;
   }
+
+  @media (min-width: 200px) and (max-width: 980px) {
+    & {
+      width: 20rem;
+      height: auto;
+    }
+  }
 `;

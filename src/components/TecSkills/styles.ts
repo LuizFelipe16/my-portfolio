@@ -56,21 +56,54 @@ export const TecSkillsStyles = styled.div`
     gap: 0.5rem;
     
     .icon {
-    width: 6.5rem;
-    height: 6.5rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 1rem;
-
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-    > img {
-      width: 90%;
-      height: 90%;
+      width: 6.5rem;
+      height: 6.5rem;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
       border-radius: 1rem;
-      object-fit: contain;
+
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      
+      > img {
+        width: 90%;
+        height: 90%;
+        border-radius: 1rem;
+        object-fit: contain;
+      }
     }
   }
+
+  @media (min-width: 200px) and (max-width: 980px) {
+    & {
+      justify-content: center;
+      align-items: center;
+      gap: 0 !important;
+
+      .swiper-skills {
+        width: 100%;
+        padding-left: 0rem;
+        padding-bottom: 0rem;
+
+        align-items: center;
+        justify-content: center;
+      }
+
+      .item {
+        align-self: center;
+        justify-self: center;
+        margin-left: 6rem;
+        margin-bottom: 2rem;
+      }
+
+      .swiper-pagination {
+        position: absolute;
+        left: 10%;
+        text-align: center;
+        transition: 300ms opacity;
+        transform: translate3d(0, 0, 0);
+        z-index: 1000;
+      }
+    }
   }
 `;

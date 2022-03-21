@@ -167,11 +167,13 @@ export const About = styled.div`
 
       .infos {
         width: 100%;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         align-items: center;
-        margin-left: none;
-        padding-left: none;
-        display: none;
+        margin-left: 0 !important;
+        margin: 0 !important;
+        padding-left: 0 !important;
+        text-align: center;
+        /* display: none; */
 
         > div {
           text-align: center;
@@ -183,18 +185,21 @@ export const About = styled.div`
         }
 
         .quote {
-          display: none;
+          /* display: none; */
+          font-size: 1rem !important;
         }
       }
 
       .about {
-        width: 100%;
-        border: 1px solid red;
-        padding-left: none;
+        width: 100% !important;
+        /* border: 1px solid red; */
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        padding: 0 !important;
         align-items: center;
         justify-content: center;
         text-align: center;
-        display: none;
+        /* display: none; */
       }
     }
   }
