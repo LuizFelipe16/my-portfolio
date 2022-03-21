@@ -229,4 +229,10 @@ export const designs: Design[] = [
     banner: 'lz-halo.png',
     size: 'normal'
   },
+  {
+    id: 38,
+    title: 'Post Carrossel Instagram Destaque seu Conteúdo',
+    banner: 'cn-destaque-conteudo.png',
+    size: 'normal'
+  },
 ];
