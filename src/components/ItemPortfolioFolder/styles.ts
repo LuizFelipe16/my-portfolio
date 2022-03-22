@@ -15,7 +15,7 @@ export const ItemPortfolioFolderStyle = styled.div`
   justify-content: center;
   gap: 1rem;
   
-  transition: 2s !important;
+  transition: 3s !important;
   animation: blinker_neon 4s infinite both;
   
   &:hover {

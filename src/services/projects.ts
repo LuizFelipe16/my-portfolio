@@ -73,4 +73,13 @@ export const projects: Project[] = [
     description: 'Nada é mais comum no mercado do que plataformas com dashboards para os usuários acessarem, e é exatamente por isso que o DashGo foi construído, uma simulação de como seria uma mini plataforma moderna e bem trabalhada no design e layout, com responsividade com outros dispositivos. Falando um pouco por dentro do projeto, ele foi desenvolvido em TypeScript, com ReactJS e NextJS, usando tecnologias modernas do mercado como por exemplo ReactHookForm, ReactQuery e MirageJS para simular uma API completa, além do layout ser constrúido com o Design System ChakraUI e algumas estilizações com Sass.',
     access: true
   },
+  {
+    id: 9,
+    title: 'Ignews',
+    banner: 'ignews.png',
+    link: 'https://challenge-ignews.vercel.app',
+    github: 'https://github.com/LuizFelipe16/ignews-full',
+    description: 'Realizar pagamentos por meio de um site é bem comum, e é por isso que esse projeto foi construído, um Blog feito com PrismicCMS, em que o usuário pode se cadastrar com o Github e comprar uma assinatura mensal usando o Stripe, dessa forma ele tem acesso aos conteúdos que são postados recorrentemente. Falando um pouco de como é por dentro do projeto, ele foi desenvolvido em TypeScript, com ReactJS e NextJS, usando a api de autenticação NextAuth e o servidor Next para construir uma API que consome Webhooks do Stripe e faz requisições ao banco de dados FaunaDB, resultando em uma aplicação JAMStack, com testes unitários em Jest e estilização moderna de design e layout com Sass.',
+    access: true
+  },
 ];
