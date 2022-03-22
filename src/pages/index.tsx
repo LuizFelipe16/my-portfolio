@@ -25,7 +25,7 @@ function IndexPage() {
 
   return (
     <Flex direction="column">
-      <Head><title>Luiz Felipe | MyPortfolio</title></Head>
+      <Head><title>Luiz Felipe | Meu Portfólio</title></Head>
       <MenuButtons />
 
       <SessionWelcome />

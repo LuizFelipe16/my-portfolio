@@ -1,10 +1,12 @@
-import { Flex, Progress, Text, VStack } from "@chakra-ui/react";
+import { Progress, Text, VStack } from "@chakra-ui/react";
+import Head from "next/head";
 
 import { LoadingStyle } from './styles';
 
 export function Loading() {
   return (
     <LoadingStyle>
+      <Head><title>Carregando | Meu Portfólio</title></Head>
       <VStack w="100vw" h="100vh" spacing="4" align="center" justify="center" bg="gray.900">
         <Text
           className="text-loading"

@@ -13,7 +13,7 @@ import { ListFolders } from "../../../styles/sessions/portfolios";
 export default function PortfolioDesign() {
   return (
     <>
-      <Head><title>Portfólio Design | Luiz Felipe</title></Head>
+      <Head><title>Meu Portfólio Design | Luiz Felipe</title></Head>
       <MenuButtons isMenuOpen={false} />
       <Stack
         w="100vw"
