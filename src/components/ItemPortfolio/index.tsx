@@ -8,6 +8,7 @@ interface IItemPortfolioProps {
     description: string;
     banner: string;
     link: string;
+    github?: string;
   }
 
   animation: string;
