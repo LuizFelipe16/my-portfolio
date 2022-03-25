@@ -93,7 +93,7 @@ export const designs: Design[] = [
   },
   {
     id: 15,
-    title: 'Criativo Salmão',
+    title: 'Criativo Consertos técnicos 2',
     banner: 'conserto-maquinas-2.png',
     size: 'normal'
   },
@@ -107,6 +107,12 @@ export const designs: Design[] = [
     id: 17,
     title: 'Criativo X-salada',
     banner: 'x-salada.png',
+    size: 'normal'
+  },
+  {
+    id: 39,
+    title: 'Criativo Promoção de Pizzas',
+    banner: 'pizzas-promocao.png',
     size: 'normal'
   },
   {
@@ -233,6 +239,42 @@ export const designs: Design[] = [
     id: 38,
     title: 'Post Carrossel Instagram Destaque seu Conteúdo',
     banner: 'cn-destaque-conteudo.png',
+    size: 'normal'
+  },
+  {
+    id: 40,
+    title: 'Post Carrossel Instagram Saiba O que pode Desestimular',
+    banner: 'cn-saiba-desestimular.png',
+    size: 'normal'
+  },
+  {
+    id: 41,
+    title: 'Post Carrossel Instagram Design Ruim',
+    banner: 'cn-um-design-ruim.png',
+    size: 'normal'
+  },
+  {
+    id: 42,
+    title: 'Logo Pizzaria Don',
+    banner: 'logo-don.png',
+    size: 'normal'
+  },
+  {
+    id: 42,
+    title: 'Logo Pizzaria Jandaia',
+    banner: 'logo-jandaia.png',
+    size: 'normal'
+  },
+  {
+    id: 43,
+    title: 'Criativo Construção Já',
+    banner: 'construcao.png',
+    size: 'normal'
+  },
+  {
+    id: 44,
+    title: 'Criativo Rodízio',
+    banner: 'rodizio.jpeg',
     size: 'normal'
   },
 ];
