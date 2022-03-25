@@ -21,7 +21,7 @@ function IndexPage() {
     }, 2000);
   }, []);
 
-  if (!!isLoadingActive) return <Loading />
+  if (!!isLoadingActive) return <Loading />;
 
   return (
     <Flex direction="column">

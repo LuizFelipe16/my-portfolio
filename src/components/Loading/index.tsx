@@ -3,7 +3,11 @@ import Head from "next/head";
 
 import { LoadingStyle } from './styles';
 
-export function Loading() {
+interface ILoadingProps {
+  text?: string;
+}
+
+export function Loading({ text }: ILoadingProps) {
   return (
     <LoadingStyle>
       <Head><title>Carregando | Meu Portfólio</title></Head>
@@ -15,7 +19,7 @@ export function Loading() {
           fontFamily="Montserrat"
           fontWeight="300"
         >
-          Olá, eu sou...
+          {!text ? 'Olá, eu sou...' : text}
         </Text>
         <Progress
           mt="1.2rem"
