@@ -88,7 +88,7 @@ export const projects: Project[] = [
     banner: 'power.png',
     link: 'https://landing-page-poderosas.vercel.app',
     github: 'https://github.com/LuizFelipe16/landing-page-power',
-    description: 'Uma das coisas mais comuns de encontrar na web são landing pages de produtos, e esse projeto é existente isso, uma reprodução de uma página já existente, mas dessa vez usando o código e as melhores tecnologias do mercado, NextJS para um carregamento limpo e rápido, design system ChakraUI para o layout, efeitos de animação, responsividade com outros dispositivos e mais algumas outras.',
+    description: 'Uma das coisas mais comuns de encontrar na web são landing pages de produtos, e esse projeto é exatamente isso, uma reprodução de uma página já existente, mas dessa vez usando o código e as melhores tecnologias do mercado, NextJS para um carregamento limpo e rápido, design system ChakraUI para o layout, efeitos de animação, responsividade com outros dispositivos e mais algumas outras funcionalidades e bibliotecas para criar essa página única.',
     access: true
   },
 ];
