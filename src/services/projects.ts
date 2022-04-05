@@ -84,11 +84,42 @@ export const projects: Project[] = [
   },
   {
     id: 10,
+    access: true,
     title: 'Landing Page: Poderosas',
     banner: 'power.png',
     link: 'https://landing-page-poderosas.vercel.app',
     github: 'https://github.com/LuizFelipe16/landing-page-power',
-    description: 'Uma das coisas mais comuns de encontrar na web são landing pages de produtos, e esse projeto é exatamente isso, uma reprodução de uma página já existente, mas dessa vez usando o código e as melhores tecnologias do mercado, NextJS para um carregamento limpo e rápido, design system ChakraUI para o layout, efeitos de animação, responsividade com outros dispositivos e mais algumas outras funcionalidades e bibliotecas para criar essa página única.',
-    access: true
+    description: `
+      Uma das coisas mais comuns de encontrar na web são landing pages de produtos, e 
+      esse projeto é exatamente isso, uma reprodução de uma página já existente, mas 
+      dessa vez usando o código e as melhores tecnologias do mercado, NextJS para um 
+      carregamento limpo e rápido, design system ChakraUI para o layout, efeitos de 
+      animação, responsividade com outros dispositivos e mais algumas outras funcionalidades 
+      e bibliotecas para criar essa página única.
+    `,
+  },
+  {
+    id: 11,
+    access: true,
+    title: 'CodeLeap Network',
+    banner: 'codeleap.png',
+    link: 'https://codeleap-chi.vercel.app',
+    github: 'https://github.com/LuizFelipe16/codeleap-app',
+    description: `
+      Uma pequena plataforma web que representa uma rede social, uma rede de network entre
+      as pessoas que entrarem e criarem postagens. Esse projeto foi um teste de código 
+      feito pela empresa CodeLeap, com sede em Londres no Reino Unido. 
+      Foi apresentado um template básico e as funcionalidades necessárias para ser completado,
+      dessa forma iniciei e finalizei o desenvolvimento fazendo as alterações e adições que achei
+      coerente ao projeto. 
+      Falando da parte técnica do projeto, ele foi feito em TypeScript com ReactJS e NextJS, 
+      recomendo ver a documentação para entender a quantidade de funcionalidades que 
+      esse pequeno projeto foi capaz de explorar, porém um pequeno resumo: 
+      cache de dados com react-query, controle dos cookies com nookies, 
+      controle de formulários e estados com react-hook-form, design system chakraUi, 
+      responsividade com celulares e tablets, validação com yup, testes unitários com jest e 
+      testing library, assim como outras libs que impactaram no desenvolvimento.
+    `,
   },
 ];
+
