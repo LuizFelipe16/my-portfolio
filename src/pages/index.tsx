@@ -6,11 +6,14 @@ import { MenuButtons } from "../components/MenuButtons";
 import { Loading } from "../components/Loading";
 import { Footer } from "../components/Footer";
 
-import { SessionWelcome } from "../components/SessionsPageIndex/Welcome";
-import { SessionAbout } from "../components/SessionsPageIndex/About";
-import { SessionSkills } from "../components/SessionsPageIndex/Skills";
-import { SessionServices } from "../components/SessionsPageIndex/Services";
-import { SessionPortfolio } from "../components/SessionsPageIndex/Portfolio";
+import {
+  SessionWelcome,
+  SessionAbout,
+  SessionSkills,
+  SessionServices,
+  SessionPortfolio,
+  SessionEntry
+} from "../components/SessionsPageIndex";
 
 function IndexPage() {
   const [isLoadingActive, setIsLoadingActive] = useState(true);
@@ -28,7 +31,8 @@ function IndexPage() {
       <Head><title>Luiz Felipe | Meu Portfólio</title></Head>
       <MenuButtons />
 
-      <SessionWelcome />
+      <SessionEntry />
+      {/* <SessionWelcome /> */}
       <SessionAbout />
       <SessionSkills />
       <SessionServices />
