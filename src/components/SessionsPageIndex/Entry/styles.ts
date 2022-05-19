@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+const widthContentTexts = '37rem'
+const myDebugger = '1px solid red'
+
+export const valueLeftContentTexts = '70px'
+
 export const Entry = styled.main`
   width: 100vw;
   min-height: 100vh;
@@ -17,20 +22,26 @@ export const Entry = styled.main`
     top: 100px;
   }
 
-  .el-3d {
-    width: 100%;
-    height: 100%;
-  }
+  .element-3d {
+    width: 65%;
+    height: 100vh;
 
+    position: absolute;
+    right: -20px;
+    top: 0;
+    /* border: ${myDebugger}; */
+  }
+  
   .content {
-    width: 47rem;
+    width: ${widthContentTexts};
     height: 100%;
 
     z-index: 100;
 
-    right: 0;
+    left: ${valueLeftContentTexts};
     top: 0;
     padding: 0.5rem;
+    /* border: ${myDebugger}; */
     
     position: absolute;
     flex-direction: column;
@@ -53,7 +64,7 @@ export const Entry = styled.main`
     h1 {
       font-family: 'JetBrains Mono', monospace;
       z-index: 10000;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       font-weight: 500;
       color: var(--cyan-500);
 
@@ -69,7 +80,7 @@ export const Entry = styled.main`
         width: 0;
       }
       to {
-        width: 43rem;
+        width: ${widthContentTexts};
       }
     } 
 
@@ -94,6 +105,10 @@ export const Entry = styled.main`
         left: 70px;
         top: 40px;
         width: 31rem;
+      }
+
+      .element-3d {
+        display: none;
       }
       
       .content {

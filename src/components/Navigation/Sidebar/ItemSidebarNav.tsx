@@ -1,5 +1,5 @@
 import { Text } from "@chakra-ui/react";
-import { scrollAnimationToSessionPageById } from "../../utils/scrollAnimationToSessionPageById";
+import { scrollAnimationToSessionPageById } from "../../../utils/scrollAnimationToSessionPageById";
 
 interface IItemSidebarNavProps {
   text: string;

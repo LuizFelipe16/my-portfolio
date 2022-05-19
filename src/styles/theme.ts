@@ -5,6 +5,9 @@ export const theme = extendTheme({
     cyan: {
       500: '#48CDD0',
       600: '#10CDD0',
-    }
+    },
+    primaryGray: {
+      1: '#171923',
+    },
   }
 });

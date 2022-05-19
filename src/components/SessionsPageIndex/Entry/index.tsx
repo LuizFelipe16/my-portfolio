@@ -9,16 +9,17 @@ export function SessionEntry() {
     <Entry>
       <Navigation />
       <Interactive3DElement
-        style="el-3d"
-        scene="https://prod.spline.design/CvPbd63Q829YZyZk/scene.splinecode"
+        style="element-3d"
+        scene="https://draft.spline.design/fXF3-Xm0PBYNFdNN/scene.splinecode"
+        onLoad={(SplineApplication) => SplineApplication.setZoom(0.8)}
       />
 
-      {/* <View style="content">
+      <View style="content">
         <Text
           className="title-gradient"
-          bgGradient='linear(to-l, #7928CA, #FF0080)'
+          bgGradient='linear(to-l, #D1D2DC, #48CDD0)'
           bgClip='text'
-          fontSize={['5xl', '6xl', '7xl']}
+          fontSize={['4xl', '5xl', '6xl']}
           fontWeight='extrabold'
           fontFamily="JetBrains Mono"
           textShadow="2xl"
@@ -29,7 +30,7 @@ export function SessionEntry() {
         <h1 className="text-typing">
           Desenvolvendo soluções para o <strong>futuro...</strong>
         </h1>
-      </View> */}
+      </View>
     </Entry>
   );
 }

@@ -1,7 +1,7 @@
 import { Box, Flex, Drawer, HStack, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Stack, useBreakpointValue, Button, Icon, Text, useDisclosure, VStack } from "@chakra-ui/react";
 import { useRef } from "react";
 import { FaIndent } from "react-icons/fa";
-import { scrollAnimationToSessionPageById } from "../../utils/scrollAnimationToSessionPageById";
+import { scrollAnimationToSessionPageById } from "../../../utils/scrollAnimationToSessionPageById";
 import { ItemSidebarNav } from "./ItemSidebarNav";
 
 export function SidebarNav() {

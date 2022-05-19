@@ -1,5 +1,5 @@
-import { scrollAnimationToSessionPageById } from "../../utils/scrollAnimationToSessionPageById";
-import { ItemNavStyles } from "./styles";
+import { scrollAnimationToSessionPageById } from "../../../utils/scrollAnimationToSessionPageById";
+import { ItemNavStyles } from "../styles";
 
 interface IItemNavProps {
   text: string;
