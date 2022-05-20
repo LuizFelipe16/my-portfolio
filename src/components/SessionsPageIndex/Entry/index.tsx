@@ -1,5 +1,7 @@
-import { Text, Button, Spinner } from "@chakra-ui/react";
+import { Text, Button, Spinner, Icon } from "@chakra-ui/react";
 import { useState } from "react";
+import { HiArrowNarrowRight } from 'react-icons/hi'
+
 import { Navigation } from "../../../components/Navigation";
 import { Interactive3DElement, View } from "../../../_app";
 
@@ -40,9 +42,6 @@ export function SessionEntry() {
           <Button 
             className="access-button"
             boxShadow='dark-lg'
-            bgGradient='linear(to-l, #2D3748, #1A202C)'
-            transition='0.3s'
-            _hover={{ ml: '0.5rem' }}
           >
             acesse
           </Button>

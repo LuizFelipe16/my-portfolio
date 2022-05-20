@@ -110,16 +110,25 @@ export const Entry = styled.main`
       color: var(--cyan-500);
       font-size: 1.2rem;
       font-weight: 400;
-      border-radius: 0px;
+      border-radius: 9999px;
 
-      padding: 1.5rem 5rem;
+      padding: 1.5rem 4rem;
+      background-color: var(--gray-800);
       margin-top: 3.5rem;
-
+      
       /* border: 1px solid var(--cyan-500); */
       border-color: var(--gray-900);
       border-width: 1px;
 
+      gap: 1.5rem;
+      
+      transition: 0.3s;
       animation: blinker_neon 4s infinite both;
+
+      &:hover {
+        margin-left: 0.5rem;
+        background-color: var(--gray-900);
+      }
 
       @keyframes blinker_neon {
         0% {
