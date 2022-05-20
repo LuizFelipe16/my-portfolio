@@ -1,17 +1,22 @@
-import { Text, Button } from "@chakra-ui/react";
+import { Text, Button, Spinner } from "@chakra-ui/react";
+import { useState } from "react";
 import { Navigation } from "../../../components/Navigation";
 import { Interactive3DElement, View } from "../../../_app";
 
 import { Entry } from "./styles";
 
 export function SessionEntry() {
+  const [isLoadingElement3d, setLoadingIsElement3d] = useState(true);
+
   return (
     <Entry>
       <Navigation />
+
+      {!!isLoadingElement3d && <div className="loading-element-3d"><Spinner color='cyan.500' size="xl" /></div>}
       <Interactive3DElement
         style="element-3d"
         scene="https://draft.spline.design/fXF3-Xm0PBYNFdNN/scene.splinecode"
-        onLoad={(SplineApplication) => SplineApplication.setZoom(0.8)}
+        onLoad={(SplineApplication) => {SplineApplication.setZoom(0.8); setLoadingIsElement3d(false)}}
       />
 
       <View style="content">
@@ -35,10 +40,9 @@ export function SessionEntry() {
           <Button 
             className="access-button"
             boxShadow='dark-lg'
-            bgGradient='linear(to-r, cyan.500, gray.900)'
-            transition='0.4s'
-            opacity={0.8}
-            _hover={{ opacity: 1 }}
+            bgGradient='linear(to-l, #2D3748, #1A202C)'
+            transition='0.3s'
+            _hover={{ ml: '0.5rem' }}
           >
             acesse
           </Button>

@@ -31,6 +31,18 @@ export const Entry = styled.main`
     top: 0;
     /* border: ${myDebugger}; */
   }
+
+  .loading-element-3d {
+    width: 65%;
+    height: 100vh;
+
+    position: absolute;
+    right: -20px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   
   .content {
     width: ${widthContentTexts};
@@ -95,15 +107,37 @@ export const Entry = styled.main`
 
     .access-button {
       font-family: 'Montserrat', monospace;
-      color: var(--gray-100);
-      font-size: 1.3rem;
-      font-weight: 600;
-      border-radius: 9999px;
+      color: var(--cyan-500);
+      font-size: 1.2rem;
+      font-weight: 400;
+      border-radius: 0px;
 
       padding: 1.5rem 5rem;
       margin-top: 3.5rem;
 
-      border: 1px solid var(--cyan-500)
+      /* border: 1px solid var(--cyan-500); */
+      border-color: var(--gray-900);
+      border-width: 1px;
+
+      animation: blinker_neon 4s infinite both;
+
+      @keyframes blinker_neon {
+        0% {
+          border-color: var(--gray-900);
+        }
+        25% {
+          border-color: var(--cyan-500);
+        }
+        50% {
+          border-color: var(--cyan-500);
+        }
+        75% {
+          border-color: var(--cyan-500);
+        }
+        100% {
+          border-color: var(--gray-900);
+        }
+      }
     }
   }
 
