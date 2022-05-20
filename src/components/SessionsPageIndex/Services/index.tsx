@@ -1,4 +1,4 @@
-import { FaPenNib, FaFileCode } from "react-icons/fa";
+import { FaPenNib, FaFileCode, FaMagic } from "react-icons/fa";
 
 import { ItemService } from "../../../components/ItemService";
 
@@ -18,20 +18,28 @@ export function SessionServices() {
       <div className="services">
         <ItemService
           icon={FaFileCode}
-          title="Projetos Web"
+          title="Desenvolvimento"
           text={`
             Desenvolvimento de sites web profissionais, 
             blogs, portfólios, landing pages, paginas 
             institucionais e/ou de apresentação com responsividade em dispositivos mobile.
-            `}
+          `}
         />
         <ItemService
           icon={FaPenNib}
-          title="Designs & Criativos"
+          title="Designs"
           text={`
             Crio designs de alta qualidade com neurodesign e neurocopy, intuitivos que 
             prendem a atenção, para as mídias sociais, assim como criativos para anúncios online.
-            `}
+          `}
+        />
+        <ItemService
+          icon={FaMagic}
+          title="Interfaces"
+          text={`
+            Desenho e planejo interfaces fluentes para o usuário saber claramente o que precisa fazer,
+            sendo objetiva e moderna, focando em interações que prendem a atenção.
+          `}
         />
       </div>
     </Services>

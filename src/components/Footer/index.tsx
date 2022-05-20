@@ -1,6 +1,7 @@
-import { Stack, Text, Heading, VStack, Button, Flex, Image, useBreakpointValue } from "@chakra-ui/react";
 import { FormEvent, useState } from "react";
+import { Stack, Text, Heading, VStack, Button, Flex, Image, useBreakpointValue, Tooltip } from "@chakra-ui/react";
 import { scrollAnimationToSessionPageById } from "../../utils/scrollAnimationToSessionPageById";
+
 import { Textarea } from "../Form/AreaText";
 import { Input } from "../Form/Input";
 
@@ -162,11 +163,33 @@ export function Footer() {
           >
             Redes Sociais
           </Heading>
-          <Text as="a" href="https://linkedin.com/in/luiz-felipe-siqueira-felizatti-00783a1ab/" target="_blank">
+          <Text 
+            as="a" 
+            href="https://linkedin.com/in/luiz-felipe-siqueira-felizatti-00783a1ab/" 
+            target="_blank"
+            transition='0.2s'
+            _hover={{ color: 'primaryColor.500' }}
+          >
             Linkedin
           </Text>
-          <Text as="a" href="https://github.com/LuizFelipe16" target="_blank">Github</Text>
-          <Text as="a" href="https://www.instagram.com/luiz_2fs/" target="_blank">Instagram</Text>
+          <Text 
+            as="a" 
+            href="https://github.com/LuizFelipe16" 
+            target="_blank"
+            transition='0.2s'
+            _hover={{ color: 'primaryColor.500' }}
+          >
+            Github
+          </Text>
+          <Text 
+            as="a" 
+            href="https://www.instagram.com/luiz_2fs/" 
+            target="_blank"
+            transition='0.2s'
+            _hover={{ color: 'primaryColor.500' }}
+          >
+            Instagram
+          </Text>
         </VStack>
         <VStack
           w={["100%", "100%", "33%"]}
@@ -192,7 +215,18 @@ export function Footer() {
           <Text>felipefelizatti215@gmail.com</Text>
         </VStack>
 
-        {!isWideVersionBreakLayoutMobile && <Image src="/robot-happy.gif" h="20rem" />}
+        {
+          !isWideVersionBreakLayoutMobile && (
+            <Tooltip 
+              label="Hey, Hora de Codar!" 
+              color="primaryGray.1"
+              bg="primaryColor.500" 
+              aria-label="Tooltop: é hora de codar"
+            >
+              <Image src="/robot-happy.gif" h="20rem" />
+            </Tooltip>
+          )
+        }
       </Flex>
       <Flex
         w="100vw"

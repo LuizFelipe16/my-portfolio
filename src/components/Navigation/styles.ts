@@ -19,7 +19,7 @@ const ItemNavStyles = styled.button`
 
   hr {
     width: 0rem;
-    height: 0.15rem;
+    height: 0.2rem;
     margin-top: 10px;
     background: #fff;
     border-radius: 5rem;

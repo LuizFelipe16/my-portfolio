@@ -20,20 +20,20 @@ export function SessionAbout() {
           <p className="text-italic text-info">
             <Icon className="quote" color="#48CDD0" mr="2" as={FaQuoteLeft} />
             A maior habilidade de quem desenvolve códigos, é saber resolver problemas
-            através deles. Em frente a um computador, devemos encontrar soluções e se adaptar de acordo
+            através deles. Em frente a um computador devemos encontrar soluções e se adaptar de acordo
             com os erros e falhas.
             <Icon color="#48CDD0" ml="2" as={FaQuoteRight} />
           </p>
         </div>
 
         <h2>Ocupações Atuais</h2>
-        <p className="text-info">FullStack Dev & Designer Freelancer</p>
+        <p className="text-info">Frontend Developer at CodeLeap</p>
 
         <h2>Hard Skills que mais utilizo</h2>
         <TecSkills />
       </div>
 
-      <img src="/images/eu.jpeg" alt="Luiz Felipe" />
+      <img src="/images/eu2.png" alt="Luiz Felipe" />
 
       <div data-aos={!!isMobileVersion ? "zoom-in-right" : "zoom-in-left"} data-aos-duration="1000" className="about">
         <h1>Olá,</h1>
@@ -43,7 +43,7 @@ export function SessionAbout() {
 
           Meu começo foi com JS há três anos, no ensino técnico e fui me aprofundar sozinho.
 
-          Criei diversos e variados projetos, sempre me aprimorando nas tecnologios que uso para
+          Criei diversos e variados projetos, sempre me aprimorando nas tecnologias que uso para
           explorar possibilidades ilimitadas que o código é capaz de oferecer,
           buscando soluções para os problemas que encontro.
         </p>

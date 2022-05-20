@@ -1,4 +1,4 @@
-import { Text } from "@chakra-ui/react";
+import { Text, Button } from "@chakra-ui/react";
 import { Navigation } from "../../../components/Navigation";
 import { Interactive3DElement, View } from "../../../_app";
 
@@ -30,6 +30,19 @@ export function SessionEntry() {
         <h1 className="text-typing">
           Desenvolvendo soluções para o <strong>futuro...</strong>
         </h1>
+
+        <div data-aos="fade-right" data-aos-duration="1000">
+          <Button 
+            className="access-button"
+            boxShadow='dark-lg'
+            bgGradient='linear(to-r, cyan.500, gray.900)'
+            transition='0.4s'
+            opacity={0.8}
+            _hover={{ opacity: 1 }}
+          >
+            acesse
+          </Button>
+        </div>
       </View>
     </Entry>
   );

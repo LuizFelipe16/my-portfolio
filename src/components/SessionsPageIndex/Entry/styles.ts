@@ -92,6 +92,19 @@ export const Entry = styled.main`
         border-right-color: transparent;
       }
     }
+
+    .access-button {
+      font-family: 'Montserrat', monospace;
+      color: var(--gray-100);
+      font-size: 1.3rem;
+      font-weight: 600;
+      border-radius: 9999px;
+
+      padding: 1.5rem 5rem;
+      margin-top: 3.5rem;
+
+      border: 1px solid var(--cyan-500)
+    }
   }
 
   @media (min-width: 200px) and (max-width: 980px) {
