@@ -31,7 +31,7 @@ export function SessionEntry() {
           fontFamily="JetBrains Mono"
           textShadow="2xl"
         >
-          Luiz Felipe
+          Dev Louiz
         </Text>
 
         <h1 className="text-typing">
