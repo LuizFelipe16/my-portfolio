@@ -37,8 +37,7 @@ interface BlogProps {
 const Blog = ({ postsPagination }: BlogProps) => {
   return (
     <View style={styles.page}>
-      <Head><title>Luiz Felipe | Blog | Meu Portfólio</title></Head>
-      <Navigation />
+      <Head><title>Luiz Felipe | Blog</title></Head>
 
       <View style={styles.content}>
         <Text type='h1' text='Conheça o nosso o meu Blog!' />
@@ -53,9 +52,8 @@ const Blog = ({ postsPagination }: BlogProps) => {
             <View style={styles.content}>
               <h1>{post.data.title}</h1>
               <p>{post.data.description}</p>
+              <Link href={`/Blog/Post/${post.uid}`}><a>Ver Post</a></Link>
             </View>
-
-            <Link href={`/Blog/Post/${post.uid}`}><a>Ver Post</a></Link>
           </View>
         ))}
       </main>

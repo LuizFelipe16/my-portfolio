@@ -58,18 +58,18 @@
     min-height: 28rem;
     max-width: 33rem;
 
+    padding-bottom: 1rem;
     background: var(--gray-700);
 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 1.5rem;
+    gap: 1.2rem;
 
     transition: 0.3s;
 
     &:hover {
-      margin-top: -0.3rem;
       background-color: var(--gray-800);
     }
 
@@ -87,7 +87,7 @@
       padding: 0 1.2rem 0 1.2rem;
 
       display: flex;
-      gap: 0.6rem;
+      gap: 0.75rem;
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-start;
@@ -96,33 +96,8 @@
         font: 600 1.2rem 'Montserrat', sans-serif;
       }
 
-      > div {
-        width: 100%;
-        height: auto;
-
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-
-        h2 {
-          display: flex;
-          gap: 0.25rem;
-          flex-direction: row;
-          font: 600 0.8rem 'Rubik', sans-serif;
-        }
-        
-        time {
-          display: flex;
-          gap: 0.25rem;
-          flex-direction: row;
-          font: 300 0.8rem 'Rubik', sans-serif;
-        }
-      }
-
       p {
         height: 8rem;
-        margin-top: 0.65rem;
         color: #fff !important;
         font: 200 1rem 'Rubik', sans-serif;
         line-height: 1.533rem;
@@ -132,28 +107,47 @@
         background-clip: text;
         -webkit-text-fill-color: transparent;
       }
-    }
 
-    a {
-      width: 100%;
-      height: 2.5rem;
-      padding: 0.4rem 1.2rem 0.4rem 1.2rem;
-  
-      color: var(--color-grey-200);
-      font: 600 0.95rem 'Montserrat', sans-serif;
-  
-      border: none;
-      cursor: pointer;
-      background: var(--color-blue);
+      a {
+        width: 100%;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+        font-family: 'Montserrat', monospace;
+        color: var(--cyan-500);
+        font-size: 0.9rem;
+        font-weight: 400;
+        padding: 0.45rem 1rem 0.45rem 1rem;
   
-      transition: 0.2s;
+        border-color: var(--gray-700);
+        border-width: 1px;
   
-      &:hover {
-        filter: brightness(80%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        transition: 0.3s;
+        animation: blinker_neon 4s infinite both;
+  
+        &:hover {
+          background-color: var(--gray-900);
+        }
+  
+        @keyframes blinker_neon {
+          0% {
+            border-color: var(--gray-700);
+          }
+          25% {
+            border-color: var(--cyan-500);
+          }
+          50% {
+            border-color: var(--cyan-500);
+          }
+          75% {
+            border-color: var(--cyan-500);
+          }
+          100% {
+            border-color: var(--gray-700);
+          }
+        }
       }
     }
   }
