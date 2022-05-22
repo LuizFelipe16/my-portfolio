@@ -2,64 +2,54 @@
   width: 100vw;
   min-height: 100vh;
 
+  color: var(--white);
+  padding: 3rem;
   position: relative;
 
   display: flex;
   flex-direction: column;
-}
-
-.content {
-  width: 100vw;
-  height: 100vh;
-
-  padding: 0 4rem 0 4rem;
-
-  display: flex;
-  gap: 30px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
 
   > h1 {
-    color: #fff;
-    font: 300 3rem 'Montserrat', sans-serif;
-  }
-
-  > h1 strong {
-    font-weight: 500;
+    font: 400 2.5rem 'Montserrat', sans-serif;
   }
 
   > p {
-    color: #fff;
-    font: 300 1.2rem 'Rubik', sans-serif;
-    opacity: 0.8;
+    margin-top: 0.8rem;
+    font: 200 1rem 'Montserrat', sans-serif;
   }
 }
 
 .posts {
-  width: 100vw;
+  width: 100%;
   height: auto;
   min-height: 25rem;
 
-  padding: 3rem;
+  margin-top: 1.2rem;
   background: var(--gray-900);
+
+  border: 1px solid red;
   
   display: flex;
   gap: 3.9rem;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   
   color: var(--cyan-500);
 
   .post {
-    width: 22rem;
-    min-height: 28rem;
-    max-width: 33rem;
+    width: 19rem;
+    min-height: 12rem;
+    max-width: 24rem;
 
     padding-bottom: 1rem;
     background: var(--gray-700);
+    border-width: 1px;
+    border-color: var(--cyan-500);
+    animation: blinker_neon 4s infinite both;
+
 
     display: flex;
     flex-direction: column;
@@ -71,11 +61,12 @@
 
     &:hover {
       background-color: var(--gray-800);
+      transform: scale(1.1);
     }
 
     img {
       width: 100%;
-      height: 12rem;
+      height: 9.5rem;
       object-fit: cover;
     }
 
@@ -93,14 +84,14 @@
       justify-content: flex-start;
 
       h1 {
-        font: 600 1.2rem 'Montserrat', sans-serif;
+        font: 500 1.1rem 'Montserrat', sans-serif;
       }
 
       p {
-        height: 8rem;
+        height: 6rem;
         color: #fff !important;
-        font: 200 1rem 'Rubik', sans-serif;
-        line-height: 1.533rem;
+        font: 200 0.9rem 'Rubik', sans-serif;
+        line-height: 1.33rem;
         overflow: hidden;
 
         background: linear-gradient(var(--gray-100), transparent);
@@ -113,76 +104,43 @@
 
         font-family: 'Montserrat', monospace;
         color: var(--cyan-500);
-        font-size: 0.9rem;
-        font-weight: 400;
-        padding: 0.45rem 1rem 0.45rem 1rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+        padding: 0.25rem 1rem 0.25rem 1rem;
   
         border-color: var(--gray-700);
         border-width: 1px;
+        border-radius: 0.35rem;
   
         display: flex;
         align-items: center;
         justify-content: center;
         
         transition: 0.3s;
-        animation: blinker_neon 4s infinite both;
   
         &:hover {
           background-color: var(--gray-900);
-        }
-  
-        @keyframes blinker_neon {
-          0% {
-            border-color: var(--gray-700);
-          }
-          25% {
-            border-color: var(--cyan-500);
-          }
-          50% {
-            border-color: var(--cyan-500);
-          }
-          75% {
-            border-color: var(--cyan-500);
-          }
-          100% {
-            border-color: var(--gray-700);
-          }
         }
       }
     }
   }
 }
 
-.title_posts {
-  font: 600 2.2rem 'Montserrat', sans-serif;
-  color: var(--color-blue);
-  align-self: flex-start;
-
-  margin-left: 5.2rem;
-}
-
-.load_posts {
-  width: 95%;
-  color: var(--color-blue);
-  font: 400 1.1rem 'Rubik', sans-serif;
-      
-  border-radius: 8px;
-  border: 1px solid var(--color-blue);
-  background-color: transparent;
-  padding: 1rem 2.5rem 1rem 2.5rem;
-  line-height: 1.2rem;
-  cursor: pointer;
-  text-align: center;
-      
-  display: flex;
-  justify-content: center;
-  align-items: center;
-      
-  transition: 0.2s;
-      
-  &:hover {
-    color: var(--color-background-dark);
-    background-color: var(--color-blue);
+@keyframes blinker_neon {
+  0% {
+    border-color: var(--gray-700);
+  }
+  25% {
+    border-color: var(--cyan-500);
+  }
+  50% {
+    border-color: var(--cyan-500);
+  }
+  75% {
+    border-color: var(--cyan-500);
+  }
+  100% {
+    border-color: var(--gray-700);
   }
 }
 
