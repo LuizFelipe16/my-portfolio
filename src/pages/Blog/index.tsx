@@ -1,8 +1,6 @@
 import type { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import { BsCalendar2WeekFill } from 'react-icons/bs';
-import { FaUserAlt } from 'react-icons/fa';
 import Prismic from '@prismicio/client';
 
 import { getPrismicClient } from '../../services/prismic';
@@ -39,30 +37,22 @@ const Blog = ({ postsPagination }: BlogProps) => {
     <View style={styles.page}>
       <Head><title>Luiz Felipe | Blog</title></Head>
 
-      <View style={styles.content}>
-        <Text type='h1' text='Conheça o nosso o meu Blog!' />
-        <Text text='Conteúdos semanais sobre o mundo Neuro relacionado ao marketing, design, desenvolvimento de sites e textos publicitários.' />
-      </View>
+      <Text type='h1' text='Hello Dev!' />
+      <Text text='Bem vindo ao meu blog, conteúdos semanais sobre design e programação.' />
 
-      <main className={styles.posts}>
+      <View style={styles.posts}>
         {postsPagination.results.map(post => (
           <View key={post.uid} style={styles.post}>
             <img src={post.data.banner.url} alt={post.data.title} />
 
             <View style={styles.content}>
-              <h1>{post.data.title}</h1>
-              <p>{post.data.description}</p>
+              <Text type='h1' text={post.data.title} />
+              <Text text={post.data.description} />
               <Link href={`/Blog/Post/${post.uid}`}><a>Ver Post</a></Link>
             </View>
           </View>
         ))}
-      </main>
-
-      {postsPagination?.next_page !== null ? (
-        <button className={styles.load_posts} type="button">Carregar mais posts</button>
-      ) : null}
-
-      <Footer />
+      </View>
     </View>
   );
 }
