@@ -1,3 +1,4 @@
+import NLink from "next/link";
 import { Text, Button, Spinner, Icon } from "@chakra-ui/react";
 import { useState } from "react";
 import { HiArrowNarrowRight } from 'react-icons/hi'
@@ -38,13 +39,15 @@ export function SessionEntry() {
           Desenvolvendo soluções para o <strong>futuro...</strong>
         </h1>
 
-        <div data-aos="fade-right" data-aos-duration="1000">
-          <Button 
-            className="access-button"
-            boxShadow='dark-lg'
-          >
-            acesse
-          </Button>
+        <div data-aos='fade-right' data-aos-duration='1000'>
+          <NLink href='/spaces'>
+            <Button 
+              className='access-button'
+              boxShadow='dark-lg'
+            >
+              Blog
+            </Button>
+          </NLink>
         </div>
       </View>
     </Entry>

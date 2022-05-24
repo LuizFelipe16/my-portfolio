@@ -19,7 +19,7 @@ export function Loading({ text }: ILoadingProps) {
           fontFamily="Montserrat"
           fontWeight="300"
         >
-          {!text ? 'Olá, eu sou...' : text}
+          {text}
         </Text>
         <Progress
           mt="1.2rem"

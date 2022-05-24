@@ -24,7 +24,7 @@ function IndexPage() {
     }, 2000);
   }, []);
 
-  if (!!isLoadingActive) return <Loading />;
+  if (!!isLoadingActive) return <Loading text='Olá, eu sou...' />;
 
   return (
     <Flex direction="column">
