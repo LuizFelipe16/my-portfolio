@@ -26,7 +26,7 @@ export const Posts = styled.div`
   .posts {
     width: 100%;
     gap: 2rem;
-    margin-top: ${theme.spacing.size(2.5)};
+    margin-top: ${theme.spacing.size(2)};
     ${theme.row.centerStart};
     ${theme.padding.vertical.p1};
   }

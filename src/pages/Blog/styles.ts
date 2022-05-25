@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import { styledPresets } from '../../_app';
+import { styledPresets as theme } from '../../_app';
 
 export const Spaces = styled.div`
   width: 100vw;
   min-height: 100vh;
 
-  ${styledPresets.column.centerStart}
+  ${theme.column.centerStart}
   position: relative;
 
   background-color: var(--gray-900);
@@ -14,19 +14,15 @@ export const Spaces = styled.div`
 
   .backPage {
     color: var(--cyan-500);
-    padding: 0.5rem 1.6rem;
-    border-radius: 9999px;
-    border: 1px solid var(--cyan-500);
-    background-color: var(--gray-800);
-    font: 400 1rem 'Montserrat', sans-serif;
+    font-size: ${theme.font.size(1.8)};
     position: absolute;
-    letter-spacing: 1px;
-    top: 25px;
-    left: 25px;
+    opacity: 0.5;
+    top: 20px;
+    left: 20px;
     transition: 0.2s;
 
     &:hover {
-      filter: brightness(90%);
+      opacity: 1;
     }
   }
 
@@ -46,10 +42,10 @@ export const Spaces = styled.div`
     
     color: var(--cyan-500);
 
-    margin-top: ${styledPresets.spacing.size(2.5)};
-    padding: ${styledPresets.spacing.size(1)};
+    margin-top: ${theme.spacing.size(2.5)};
+    padding: ${theme.spacing.size(1)};
 
-    ${styledPresets.centerRow};
+    ${theme.centerRow};
   }
   
   @media (min-width: 320px) and (max-width: 968px) {

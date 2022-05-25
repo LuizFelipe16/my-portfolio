@@ -5,14 +5,14 @@ import type { GetStaticProps, GetStaticPaths } from 'next';
 import { FaLongArrowAltLeft } from 'react-icons/fa';
 import Prismic from '@prismicio/client';
 
-import { getPrismicClient } from '../../services/prismic';
+import { getPrismicClient } from '../../services';
 
 import type { RouterCategories } from '../../types';
 import { Loading } from '../../components';
 import { Link, Text, TitlePage, View } from '../../_app';
 
 import { Posts, Post } from './styles';
-
+ 
 interface Post {
   uid?: string;
   first_publication_date: string;
@@ -31,11 +31,11 @@ interface PostPagination {
   results: Post[];
 }
 
-interface BlogProps {
+interface PostsProps {
   postsPagination: PostPagination;
 }
 
-function PagePosts({ postsPagination }: BlogProps) {
+function PagePosts({ postsPagination }: PostsProps) {
   const { query } = useRouter() as RouterCategories;
   const [isLoading, setIsLoading] = useState(true);
 
@@ -63,7 +63,7 @@ function PagePosts({ postsPagination }: BlogProps) {
             <View style='content'>
               <Text type='h1' text={post.data.title} />
               <Text text={post.data.description} />
-              <Link href={`/Blog/Post/${post.uid}`}><a>Ver Post</a></Link>
+              <Link href={`/posts/post/${post.uid}`}><a>Ver Post</a></Link>
             </View>
           </Post>
         ))}

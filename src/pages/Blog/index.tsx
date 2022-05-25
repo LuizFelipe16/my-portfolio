@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
+import { FaLongArrowAltLeft } from 'react-icons/fa';
+
 import { ItemSpace, Loading } from '../../components';
 import { Link, Text, TitlePage, View } from '../../_app';
 
 import { Spaces } from './styles';
 
-export default function MySpaces() {
+export default function PageBlog() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => { setTimeout(() => setIsLoading(false), 1000) }, []);
@@ -15,7 +17,9 @@ export default function MySpaces() {
     <Spaces>
       <TitlePage t='Blog' />
 
-      <Link href='/' text='voltar' style='backPage' />
+      <Link href='/blog' style='backPage'>
+        <FaLongArrowAltLeft />
+      </Link>
 
       <Text type='h1' text='Blog' />
       <Text text='Escolha um dos spaces para acessar o conteúdo' />
