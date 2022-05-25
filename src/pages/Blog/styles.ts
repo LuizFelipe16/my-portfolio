@@ -40,7 +40,7 @@ export const Spaces = styled.div`
     margin-top: 1.2rem;
   }
   
-  .posts {
+  .spaces {
     width: 100%;
     gap: 2rem;
     
@@ -66,7 +66,7 @@ export const Spaces = styled.div`
       }
     }
 
-    .posts {
+    .spaces {
       width: 100%;
       padding: 2rem;
     }

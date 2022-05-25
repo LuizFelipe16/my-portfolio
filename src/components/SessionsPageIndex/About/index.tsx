@@ -33,7 +33,7 @@ export function SessionAbout() {
         <TecSkills />
       </div>
 
-      <img src="/images/eu2.png" alt="Luiz Felipe" />
+      <img src="/images/eu3.png" alt="Luiz Felipe" />
 
       <div data-aos={!!isMobileVersion ? "zoom-in-right" : "zoom-in-left"} data-aos-duration="1000" className="about">
         <h1>Olá,</h1>

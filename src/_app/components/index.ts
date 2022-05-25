@@ -5,3 +5,4 @@ export * from './View';
 export * from './specials';
 
 export * from './next/Link';
+export * from './next/TitlePage';

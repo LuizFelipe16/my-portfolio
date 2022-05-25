@@ -1,21 +1,24 @@
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+
 import { ItemSpace, Loading } from '../../components';
 import { Link, Text, TitlePage, View } from '../../_app';
 
-import { Spaces } from './styles';
+import { Posts } from './styles';
 
 export default function MySpaces() {
+  const { query } = useRouter();
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => { setTimeout(() => setIsLoading(false), 1000) }, []);
+  useEffect(() => { setTimeout(() => setIsLoading(false), 500) }, []);
 
   if (!!isLoading) return <Loading />;
 
   return (
-    <Spaces>
-      <TitlePage t='Blog' />
+    <Posts>
+      <TitlePage t={`Posts ${query?.category}`} />
 
-      <Link href='/' text='voltar' style='backPage' />
+      <Link href='/blog' text='voltar' style='backPage' />
 
       <Text type='h1' text='Blog' />
       <Text text='Escolha um dos spaces para acessar o conteúdo' />
@@ -25,15 +28,9 @@ export default function MySpaces() {
           icon='/icons/code.png'
           title='Programação' 
           description='Conteúdo épico sobre o universo da programação'
-          href='/posts/programacao'
-        />
-        <ItemSpace 
-          icon='/icons/design.png'
-          title='Design' 
-          description='Conteúdo épico sobre o universo do design'
-          href='/posts/design'
+          href=''
         />
       </View>
-    </Spaces>
+    </Posts>
   );
 }

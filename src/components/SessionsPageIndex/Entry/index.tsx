@@ -40,7 +40,7 @@ export function SessionEntry() {
         </h1>
 
         <div data-aos='fade-right' data-aos-duration='1000'>
-          <NLink href='/spaces'>
+          <NLink href='/blog'>
             <Button 
               className='access-button'
               boxShadow='dark-lg'
