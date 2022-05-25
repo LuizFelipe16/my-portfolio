@@ -1,5 +1,5 @@
 import { Progress, Text, VStack } from "@chakra-ui/react";
-import Head from "next/head";
+import { TitlePage } from "../../_app";
 
 import { LoadingStyle } from './styles';
 
@@ -10,7 +10,7 @@ interface ILoadingProps {
 export function Loading({ text }: ILoadingProps) {
   return (
     <LoadingStyle>
-      <Head><title>Carregando | Meu Portfólio</title></Head>
+      <TitlePage t='Carregando...' />
       <VStack w="100vw" h="100vh" spacing="4" align="center" justify="center" bg="gray.900">
         <Text
           className="text-loading"

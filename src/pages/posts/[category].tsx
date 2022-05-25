@@ -1,14 +1,45 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import type { GetStaticProps, GetStaticPaths } from 'next';
 
-import { ItemSpace, Loading } from '../../components';
+import { FaLongArrowAltLeft } from 'react-icons/fa';
+import Prismic from '@prismicio/client';
+
+import { getPrismicClient } from '../../services/prismic';
+
+import type { RouterCategories } from '../../types';
+import { Loading } from '../../components';
 import { Link, Text, TitlePage, View } from '../../_app';
 
-import { Posts } from './styles';
+import { Posts, Post } from './styles';
 
-export default function MySpaces() {
-  const { query } = useRouter();
+interface Post {
+  uid?: string;
+  first_publication_date: string;
+  data: {
+    title: string;
+    description: string;
+    banner: {
+      url: string;
+    };
+    author: string;
+  };
+}
+
+interface PostPagination {
+  next_page: string;
+  results: Post[];
+}
+
+interface BlogProps {
+  postsPagination: PostPagination;
+}
+
+function PagePosts({ postsPagination }: BlogProps) {
+  const { query } = useRouter() as RouterCategories;
   const [isLoading, setIsLoading] = useState(true);
+
+  const category = query?.category == 'programacao' ? 'Programação' : 'Design';
 
   useEffect(() => { setTimeout(() => setIsLoading(false), 500) }, []);
 
@@ -16,21 +47,72 @@ export default function MySpaces() {
 
   return (
     <Posts>
-      <TitlePage t={`Posts ${query?.category}`} />
+      <TitlePage t={`Posts ${category}`} />
+      <Link href='/blog' style='backPage'>
+        <FaLongArrowAltLeft />
+      </Link>
 
-      <Link href='/blog' text='voltar' style='backPage' />
+      <Text type='h1' text={`Posts ${category}`} />
+      <Text text='Códigos... coisa magnífica! Acesse um dos conteúdos que foram preparados cuidadosamente para você.' />
 
-      <Text type='h1' text='Blog' />
-      <Text text='Escolha um dos spaces para acessar o conteúdo' />
+      <View type='main' style='posts'>
+        {postsPagination.results.map(post => (
+          <Post key={post.uid}>
+            <img src={post.data.banner.url} alt={post.data.title} />
 
-      <View type='main' style='spaces'>
-        <ItemSpace 
-          icon='/icons/code.png'
-          title='Programação' 
-          description='Conteúdo épico sobre o universo da programação'
-          href=''
-        />
+            <View style='content'>
+              <Text type='h1' text={post.data.title} />
+              <Text text={post.data.description} />
+              <Link href={`/Blog/Post/${post.uid}`}><a>Ver Post</a></Link>
+            </View>
+          </Post>
+        ))}
       </View>
     </Posts>
   );
 }
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [],
+    fallback: 'blocking'
+  }
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const prismic = getPrismicClient();
+
+  const postsResponse = await prismic.query([
+    Prismic.Predicates.at('document.type', 'post')
+  ], {
+    pageSize: 20
+  });
+
+  const posts = postsResponse?.results?.map(post => {
+    return {
+      uid: post.uid,
+      first_publication_date: new Date(String(post.first_publication_date)).toLocaleDateString('pt-BR', {
+        day: '2-digit',
+        month: 'long',
+        year: 'numeric'
+      }),
+      data: {
+        title: post.data.title,
+        description: post.data.description,
+        author: post.data.author,
+        banner: post.data.banner
+      }
+    }
+  });
+
+  return {
+    props: {
+      postsPagination: {
+        next_page: postsResponse.next_page,
+        results: posts
+      }
+    }
+  }
+};
+
+export default PagePosts;
