@@ -1,58 +1,66 @@
 import styled from 'styled-components';
+import { styledPresets } from '../../../_app';
 
 export const Post = styled.div`
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
   .container {
     width: 100vw;
     height: auto;
     min-height: 100vh;
 
-    background: var(--color-background-dark);
+    background: var(--gray-900);
 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-  }
 
-  .illustration {
-    width: 100%;
-  
-    opacity: 0.3;
-    position: absolute;
+    > .illustration {
+      width: 100%;
+    
+      opacity: 0.3;
+      position: absolute;
 
-    object-fit: cover;
-  
-    top: 0;
-    left: 0;
-  }
-
-  .content {
-    width: 80%;
-    height: 90vh;
-  
-    padding: 0 11rem 0 11rem;
-  
-    display: flex;
-    gap: 30px;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-
-    > h1 {
-      color: #fff;
-      opacity: 1;
-      z-index: 10;
-      font: 300 3rem 'Montserrat', sans-serif;
+      object-fit: cover;
+    
+      top: 0;
+      left: 0;
     }
 
-    > h1 strong {
-      font-weight: 500;
-    }
+    > .content {
+      width: 80%;
+      height: 90vh;
+    
+      padding: 0 11rem 0 11rem;
+    
+      display: flex;
+      gap: 30px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
 
-    > p {
-      color: #fff;
-      font: 300 1.2rem 'Rubik', sans-serif;
-      opacity: 0.8;
+      > h1 {
+        color: #fff;
+        opacity: 1;
+        z-index: 10;
+        font: 300 3rem 'Montserrat', sans-serif;
+      }
+
+      > h1 strong {
+        font-weight: 500;
+      }
+
+      > p {
+        color: #fff;
+        font: 300 1.2rem 'Montserrat', sans-serif;
+        opacity: 0.8;
+      }
     }
   }
 
@@ -61,8 +69,8 @@ export const Post = styled.div`
     left: 80px;
     position: absolute;
 
-    border: 1px solid var(--color-background-dark);
-    background: var(--color-background-dark);
+    border: 1px solid var(--gray-900);
+    background: var(--gray-900);
     width: 4rem;
     height: 4rem;
 
@@ -80,9 +88,9 @@ export const Post = styled.div`
     cursor: pointer;
     
     &:hover {
-      border: 1px solid var(--color-blue);
+      border: 1px solid var(--cyan-500);
       transform: scale(1.1);
-      color: var(--color-blue);
+      color: var(--cyan-500);
     }
   }
 
@@ -92,7 +100,8 @@ export const Post = styled.div`
     min-height: 30rem;
 
     padding: 5rem 1.5rem 5rem 1.5rem;
-    background: var(--color-background-dark);
+    background: var(--gray-900);
+    color: var(--white);
 
     display: flex;
     gap: 2rem;
@@ -100,66 +109,118 @@ export const Post = styled.div`
     align-items: center;
     justify-content: flex-start;
 
-    
-    .content {
-      width: 75%;
+    .post_content {
+      width: 80%;
       min-height: 30rem;
-      // border: 1px solid red;
-      color: var(--color-blue);
-      padding: 3.5rem 3.2rem 3.5rem 3.2rem;
-      border-radius: 0.5rem;
-      background: var(--color-background-dark);
+      color: var(--cyan-500);
+      padding: 3.5rem 3.2rem;
+      border-radius: 0.8rem;
+      background: var(--gray-900);
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
+
+      margin-top: -8rem;
+      z-index: 10;
+      ${styledPresets.column.startStart}
       gap: 1.2rem;
 
       .post_title {
-        color: var(--color-blue);
-        font: 600 3rem 'Montserrat', sans-serif;
+        color: var(--cyan-500);
+        font: 600 2.5rem 'Montserrat', sans-serif;
       }
 
       .post_subtitle {
-        color: var(--gray-100);
-        font: 400 1.3rem 'Rubik', sans-serif;
+        color: var(--white);
+        font: 400 1.2rem 'Montserrat', sans-serif;
         margin-bottom: 1.6rem;
       }
 
       > hr {
-        width: 50%;
+        width: 100%;
         height: 0.2rem;
-        background: var(--color-blue);
+        background: var(--cyan-500);
         opacity: 0.2;
         border-radius: 100%;
         border: none;
       }
 
       .post_information {
-        width: 29rem;
+        width: 100%;
         height: auto;
-        // border: 1px solid red;
 
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
 
+        color: var(--cyan-500);
+        font: 300 1rem 'Montserrat', sans-serif;
+
         > h2 {
-          font: 300 1rem 'Rubik', sans-serif;
-          display: flex;
-          align-items: center;
+          ${styledPresets.centerRow}
           gap: 0.5rem;
         }
         
         > time {
-          font: 200 1rem 'Rubik', sans-serif;
-          font-size: 1rem;
-          color: ar(--gray-300);
-          display: flex;
-          align-items: center;
+          ${styledPresets.centerRow}
           gap: 0.5rem;
+        }
+      }
+    }
+
+    .author {
+      width: 28rem;
+      min-height: 10rem;
+
+      color: var(--gray-900);
+      padding: 1.2rem 3.2rem 1.2rem 3.2rem;
+      border-radius: 0.5rem 50% 0.5rem 0.5rem;
+
+      background: var(--cyan-500);
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 2.5rem;
+      
+      img {
+        width: 12rem;
+        height: 11rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border: 3px solid var(--cyan-500);
+        border-radius: 0.5rem 50% 0.5rem 0.5rem;
+
+        object-fit: cover;
+        margin-left: -6.5rem;
+      }
+
+      .author_content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        h1 {
+          font-size: 1.2rem;
+        }
+        
+        p {
+          font-weight: bold;
+          font-size: 2rem;
+        }
+        
+        .social {
+          width: 2rem;
+          border-radius: 0.25rem;
+          padding: 0.25rem;
+          background: var(--gray-900);
+          color: var(--cyan-500);
+          margin-top: 1.2rem;
+          
+          a {
+            font-size: 1.5rem;
+          }
         }
       }
     }
@@ -175,74 +236,21 @@ export const Post = styled.div`
     margin-top: 2rem;
 
     > h1 {
-      color: var(--gray-100);
+      color: var(--white);
       font: bold 1.7rem 'Montserrat';
 
       margin-bottom: 1.35rem !important;
     }
 
     .postContent {
-      color: var(--gray-100);
+      color: var(--white);
       display: flex;
       flex-direction: column;
       gap: 1.25rem;
       line-height: 1.95rem !important;
-      font-family: 'Roboto';
+      font-family: 'Montserrat';
       text-align: justify;
       font-size: 1.1rem;
-    }
-  }
-
-  .author {
-    width: 28rem;
-    min-height: 10rem;
-
-    color: var(--color-background-dark);
-    padding: 1.2rem 3.2rem 1.2rem 3.2rem;
-    border-radius: 0.5rem 50% 0.5rem 0.5rem;
-
-    background: var(--color-blue);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 2.5rem;
-    
-    img {
-      width: 11rem;
-      height: 11rem;
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      border: 3px solid var(--color-blue);
-      border-radius: 100%;
-      object-fit: cover;
-      margin-left: -6.5rem;
-    }
-
-    div {
-      gap: 1.2rem;
-      
-      h1 {
-        font-size: 1.2rem;
-      }
-      
-      p {
-        font-weight: bold;
-        font-size: 2rem;
-      }
-      
-      .social {
-        width: 2rem;
-        border-radius: 0.25rem;
-        padding: 0.25rem;
-        background: var(--color-background-dark);
-        color: var(--color-blue);
-        
-        a {
-          font-size: 1.5rem;
-        }
-      }
     }
   }
 
@@ -265,9 +273,9 @@ export const Post = styled.div`
     position: fixed;
 
     border-radius: 0 0.8rem 0.8rem 0;
-    background: var(--color-blue);
-    color: var(--color-background-dark);
-    border: 1px solid var(--color-blue);
+    background: var(--cyan-500);
+    color: var(--gray-900);
+    border: 1px solid var(--cyan-500);
 
     display: flex;
     flex-direction: column;
@@ -277,8 +285,8 @@ export const Post = styled.div`
     transition: 0.2s;
 
     &:hover {
-      background-color: var(--color-background-dark);
-      color: var(--color-blue);
+      background-color: var(--gray-900);
+      color: var(--cyan-500);
     }
   }
 
@@ -355,7 +363,7 @@ export const Post = styled.div`
         }
     
         .post_subtitle {
-          font: 400 1rem 'Rubik', sans-serif;
+          font: 400 1rem 'Montserrat', sans-serif;
         }
     
         > hr {
@@ -366,7 +374,7 @@ export const Post = styled.div`
           width: 100%;
     
           > h2 {
-            font: 300 1rem 'Rubik', sans-serif;
+            font: 300 1rem 'Montserrat', sans-serif;
           }
           
           > time {

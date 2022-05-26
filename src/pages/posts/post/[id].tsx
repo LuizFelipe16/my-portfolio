@@ -6,11 +6,12 @@ import { BsCalendar2WeekFill } from 'react-icons/bs';
 import { FaUserAlt, FaLongArrowAltLeft } from 'react-icons/fa';
 import { AiFillLinkedin, AiOutlineLink, AiFillInstagram } from 'react-icons/ai';
 
-import { Footer } from '../../../components';
+import { Footer, Loading } from '../../../components';
 import { getPrismicClient } from '../../../services';
 
 import { Post } from './styles';
 import { TitlePage, Link, View, Text, Divider } from '../../../_app';
+import { useEffect, useState } from 'react';
 
 interface PostData {
   uid?: string;
@@ -35,9 +36,13 @@ interface PostProps {
 }
 
 function PagePost({ post }: PostProps) {
-  function copyRouteToClipboard() {
-    navigator.clipboard.writeText(`https://www.cybernegocio.com.br${Router.asPath}`);
-  }
+  const [isLoading, setIsLoading] = useState(true);
+  
+  const copyRouteToClipboard = () => navigator.clipboard.writeText(`https://www.cybernegocio.com.br${Router.asPath}`);
+
+  useEffect(() => { setTimeout(() => setIsLoading(false), 500) }, []);
+
+  if (!!isLoading) return <Loading />;
 
   return (
     <Post>
@@ -80,8 +85,8 @@ function PagePost({ post }: PostProps) {
         </View>
       </View>
 
-      <View type='main' className='post'>
-        <article className='content'>
+      <View type='main' style='post'>
+        <View style='post_content'>
           <Text type='h1' style='post_title' text={post.data.title} />
           <Text type='h2' style='post_subtitle' text={post.data.subtitle} />
           <Divider style='divider' />
@@ -99,12 +104,12 @@ function PagePost({ post }: PostProps) {
               />
             </div>
           ))}
-        </article>
+        </View>
 
         <View style='author'>
-          <img src="/authors/luizfelipe.jpeg" alt="Foto do Autor do Post" />
+          <img src="/images/eu3.png" alt="Foto do Autor do Post" />
 
-          <View>
+          <View style='author_content'>
             <Text type='h1' text='Author' />
             <Text text={post.data.author} />
             <View style='social'>
