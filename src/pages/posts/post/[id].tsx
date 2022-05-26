@@ -1,35 +1,15 @@
+import { useEffect, useState } from 'react';
 import type { GetStaticPaths, GetStaticProps } from 'next';
-import Router from 'next/router';
-import { Tooltip } from '@chakra-ui/react';
 import { RichText } from 'prismic-dom';
 import { BsCalendar2WeekFill } from 'react-icons/bs';
-import { FaUserAlt, FaLongArrowAltLeft } from 'react-icons/fa';
-import { AiFillLinkedin, AiOutlineLink, AiFillInstagram } from 'react-icons/ai';
+import { FaUserAlt } from 'react-icons/fa';
 
-import { Footer, Loading } from '../../../components';
 import { getPrismicClient } from '../../../services';
+import { Author, Footer, HeaderPost, Loading, OptionsButtons, SectionComments } from '../../../components';
+import { TitlePage, View, Text, Divider } from '../../../_app';
+import { PostData } from '../../../types';
 
 import { Post } from './styles';
-import { TitlePage, Link, View, Text, Divider } from '../../../_app';
-import { useEffect, useState } from 'react';
-
-interface PostData {
-  uid?: string;
-  first_publication_date: string | null;
-  data: {
-    title: string;
-    banner: {
-      url: string;
-    };
-    description: string;
-    subtitle: string;
-    author: string;
-    content: {
-      heading: string;
-      body: string;
-    }[];
-  };
-}
 
 interface PostProps {
   post: PostData;
@@ -37,53 +17,16 @@ interface PostProps {
 
 function PagePost({ post }: PostProps) {
   const [isLoading, setIsLoading] = useState(true);
-  
-  const copyRouteToClipboard = () => navigator.clipboard.writeText(`https://www.cybernegocio.com.br${Router.asPath}`);
 
   useEffect(() => { setTimeout(() => setIsLoading(false), 500) }, []);
-
+  
   if (!!isLoading) return <Loading />;
 
   return (
     <Post>
       <TitlePage t={post.data.title} />
-      <Link href='/blog' style='back_page'><FaLongArrowAltLeft /></Link>
-
-      <Tooltip
-        label="Copie e Compartilhe o Link com Amigos 😯"
-        placement="right-end"
-        bg="blue.600"
-        color="gray.400"
-      >
-        <View style='options_post options_post_link'>
-          <button type="button" onClick={copyRouteToClipboard}><AiOutlineLink size={22} /></button>
-        </View>
-      </Tooltip>
-
-      <Tooltip
-        label="Visite Nosso Instagram Para Novidades e mais Conteúdo 👀"
-        placement="right-end"
-        bg="blue.600"
-        color="gray.400"
-      >
-        <View style='options_post options_post_insta'>
-          <a
-            href="https://www.instagram.com/cybernegocioscn/"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <AiFillInstagram size={22} />
-          </a>
-        </View>
-      </Tooltip>
-
-      <View style='container'>
-        <img className='illustration' src={post.data.banner.url} alt={post.data.title} />
-        <View style='content'>
-          <Text type='h1' text={post.data.title} />
-          <Text text={post.data.description} />
-        </View>
-      </View>
+      <OptionsButtons />
+      <HeaderPost banner={post.data.banner.url} headline={post.data.title} description={post.data.description} />
 
       <View type='main' style='post'>
         <View style='post_content'>
@@ -106,23 +49,9 @@ function PagePost({ post }: PostProps) {
           ))}
         </View>
 
-        <View style='author'>
-          <img src="/images/eu3.png" alt="Foto do Autor do Post" />
+        {SectionComments()}
 
-          <View style='author_content'>
-            <Text type='h1' text='Author' />
-            <Text text={post.data.author} />
-            <View style='social'>
-              <a
-                href="https://www.linkedin.com/in/luiz-felipe-siqueira-felizatti-00783a1ab/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <AiFillLinkedin />
-              </a>
-            </View>
-          </View>
-        </View>
+        <Author name={post.data.author} />
       </View>
 
       <Footer />

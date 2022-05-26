@@ -2,7 +2,7 @@ import { HTMLAttributes, ReactNode } from "react";
 
 interface ViewProps extends HTMLAttributes<HTMLDivElement> {
   style?: string | undefined | any;
-  children: ReactNode;
+  children?: ReactNode;
   type?: 'div' | 'main';
 }
 

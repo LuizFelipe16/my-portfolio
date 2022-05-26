@@ -3,9 +3,9 @@ import { appVariables } from "../app";
 const size = (multiplier: number) => `${multiplier * appVariables.size.MULTIPLIER}${appVariables.size.UNITY}`
 
 export const styledPresets = {
-  debugger: 'border: 1px solid red',
+  debugger: 'border: 1px solid red;',
   presets: {
-    debugger: 'border: 1px solid red',
+    debugger: 'border: 1px solid red;',
   },
 
   centerRow: `
@@ -64,6 +64,13 @@ export const styledPresets = {
   },
 
   column: {
+    // NOTE alignJustify
+    centerCenter: `
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    `,
     centerStart: `
       display: flex;
       flex-direction: column;
@@ -88,6 +95,12 @@ export const styledPresets = {
       align-items: flex-start;
       justify-content: flex-end;
     `,
+    startCenter: `
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    `,
     endEnd: `
       display: flex;
       flex-direction: column;
@@ -99,6 +112,12 @@ export const styledPresets = {
       flex-direction: column;
       align-items: flex-end;
       justify-content: flex-start;
+    `,
+    endCenter: `
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
     `,
   },
 

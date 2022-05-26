@@ -7,28 +7,15 @@ import Prismic from '@prismicio/client';
 
 import { getPrismicClient } from '../../services';
 
-import type { RouterCategories } from '../../types';
+import type { PostData, RouterCategories } from '../../types';
 import { Loading } from '../../components';
 import { Link, Text, TitlePage, View } from '../../_app';
 
 import { Posts, Post } from './styles';
- 
-interface Post {
-  uid?: string;
-  first_publication_date: string;
-  data: {
-    title: string;
-    description: string;
-    banner: {
-      url: string;
-    };
-    author: string;
-  };
-}
 
 interface PostPagination {
   next_page: string;
-  results: Post[];
+  results: PostData[];
 }
 
 interface PostsProps {
