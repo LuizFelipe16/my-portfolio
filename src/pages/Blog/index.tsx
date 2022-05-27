@@ -9,7 +9,7 @@ import { Spaces } from './styles';
 export default function PageBlog() {
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => { setTimeout(() => setIsLoading(false), 1000) }, []);
+  useEffect(() => { setTimeout(() => setIsLoading(false), 500) }, []);
 
   if (!!isLoading) return <Loading />;
 
@@ -17,7 +17,7 @@ export default function PageBlog() {
     <Spaces>
       <TitlePage t='Blog' />
 
-      <Link href='/blog' style='backPage'>
+      <Link href='/' style='backPage'>
         <FaLongArrowAltLeft />
       </Link>
 

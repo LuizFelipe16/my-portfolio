@@ -3,6 +3,7 @@ import { styledPresets } from '../../../../_app';
 
 export const ItemSpace = styled.div`
   width: 17rem;
+  max-width: 18rem;
   height: 20rem;
 
   ${styledPresets.column.startStart};
@@ -75,5 +76,27 @@ export const ItemSpace = styled.div`
     100% {
       border-color: var(--gray-700);
     }
-  }    
+  }
+
+  @media (min-width: 200px) and (max-width: 768px) {
+    & {
+      width: 100%;
+      ${styledPresets.column.centerCenter}
+
+      img {
+        width: 4rem;
+        height: 4rem;
+      }
+
+      .content {
+        margin-left: 0;
+        ${styledPresets.column.centerCenter}
+        text-align: center;
+      }
+
+      .go {
+        margin-left: 0;
+      }
+    }
+  }
 `

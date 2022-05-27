@@ -29,11 +29,13 @@ export const Spaces = styled.div`
   > h1 {
     font: 400 2rem 'Montserrat', sans-serif;
     margin-top: 2.5rem;
+    text-align: center;
   }
   
   > p {
     font: 200 0.9rem 'Montserrat', sans-serif;
     margin-top: 1.2rem;
+    text-align: center;
   }
   
   .spaces {
@@ -48,7 +50,7 @@ export const Spaces = styled.div`
     ${theme.centerRow};
   }
   
-  @media (min-width: 320px) and (max-width: 968px) {
+  @media (min-width: 200px) and (max-width: 968px) {
     .container {
       .illustration {
         display: none;
@@ -64,7 +66,7 @@ export const Spaces = styled.div`
 
     .spaces {
       width: 100%;
-      padding: 2rem;
+      padding: 0.5rem;
     }
   }
 `

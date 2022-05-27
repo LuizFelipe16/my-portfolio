@@ -1,6 +1,7 @@
 export function SectionComments() {
   return (
     <section
+      style={{ width: '100%' }}
       ref={
         element => {
           if (!element) {

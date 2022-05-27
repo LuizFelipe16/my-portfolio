@@ -5,7 +5,7 @@ import { BsCalendar2WeekFill } from 'react-icons/bs';
 import { FaUserAlt } from 'react-icons/fa';
 
 import { getPrismicClient } from '../../../services';
-import { Author, Footer, HeaderPost, Loading, OptionsButtons, SectionComments } from '../../../components';
+import { Author, Footer, HeaderPost, Loading, OptionsButtons } from '../../../components';
 import { TitlePage, View, Text, Divider } from '../../../_app';
 import { PostData } from '../../../types';
 
@@ -19,6 +19,30 @@ function PagePost({ post }: PostProps) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => { setTimeout(() => setIsLoading(false), 500) }, []);
+
+  function SectionComments() {
+    return (
+      <section
+        style={{ width: '90%' }}
+        ref={
+          element => {
+            if (!element) {
+              return
+            }
+  
+            const scriptElement = document.createElement('script')
+            scriptElement.setAttribute('src', 'https://utteranc.es/client.js')
+            scriptElement.setAttribute('repo', 'LuizFelipe16/spaceblog-comments')
+            scriptElement.setAttribute('issue-term', 'pathname')
+            scriptElement.setAttribute('theme', 'photon-dark')
+            scriptElement.setAttribute('crossorigin', 'anonymous')
+            scriptElement.setAttribute('async', 'true')
+            element.replaceChildren(scriptElement)
+          }
+        }
+      />
+    );
+  }
   
   if (!!isLoading) return <Loading />;
 

@@ -63,3 +63,18 @@
     color: var(--cyan-500);
   }
 }
+
+@media (min-width: 200px) and (max-width: 968px) {
+  .options_post {
+    display: none;
+  }
+  
+  .back_page {
+    width: 3rem;
+    height: 3rem;
+    top: 15px;
+    left: 15px;
+
+    font-size: 1.4rem;
+  }
+}

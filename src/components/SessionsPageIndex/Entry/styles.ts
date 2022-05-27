@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { styledPresets } from '../../../_app';
 
 const widthContentTexts = '37rem'
 const myDebugger = '1px solid red'
@@ -173,6 +174,8 @@ export const Entry = styled.main`
         width: 100%;
         position: relative;
 
+        left: 0;
+        right: 0;
         justify-content: center;
         align-items: center;
 
@@ -185,7 +188,7 @@ export const Entry = styled.main`
             width: 0;
           }
           to {
-            width: 100%;
+            width: 95%;
           }
         } 
       }

@@ -42,4 +42,31 @@ export const ViewHeader = styled.div`
       opacity: 0.8;
     }
   }
+
+  @media (min-width: 200px) and (max-width: 968px) {
+    & {
+      justify-content: center;
+      align-items: flex-start;
+
+      .banner {
+        width: 100%;
+        height: 100vh;
+        opacity: 0.1;
+        object-fit: cover;
+
+        /* display: none; */
+      }
+      
+      .content {
+        width: 100%;
+        height: auto;
+        
+        padding: 2rem;
+
+        h1 {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
 `;

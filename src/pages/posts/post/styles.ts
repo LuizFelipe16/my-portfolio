@@ -111,72 +111,18 @@ export const Post = styled.div`
     }
   }
 
-  @media (min-width: 320px) and (max-width: 968px) {
-    .container {
-      justify-content: center;
-      align-items: flex-start;
-
-      .illustration {
-        width: 100%;
-        height: 100%;
-
-        display: none;
-      }
-    
-      .content {
-        width: 100%;
-        height: auto;
-      
-        padding: 2rem;
-
-        h1 {
-          font-size: 2.5rem;
-        }
-      }
-    }
-    
-    .back_page {
-      top: 20px;
-      left: 30px;
-    }
-
-    .author {
-      width: 100%;
-      min-height: 20rem;
-      margin-top: 3rem;
-
-      padding: 0 0 0 0 !important;
-      border-radius: 0.5rem;
-      box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px;
-
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      text-align: center;
-
-      img {
-        margin-top: -3rem;
-        margin-left: 0;
-      }
-
-      .social {
-        width: 100% !important;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-    }
-
+  @media (min-width: 200px) and (max-width: 968px) {
     .post {
-      margin-top: 0rem;
+      margin-top: 2.5rem;
       border-radius: 0 0 0 0;
-    
-      .content {
+      padding: 0;
+      
+      .post_content {
         width: 100%;
         min-height: 30rem;
-
-        padding: 0 0 0 0 !important;
+        border-radius: 0 0 0 0;
+        
+        padding: 1.8rem !important;
         box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px;
     
         .post_title {
@@ -203,10 +149,6 @@ export const Post = styled.div`
           }
         }
       }
-    }
-
-    .options_post {
-      display: none;
     }
   }
 `;
