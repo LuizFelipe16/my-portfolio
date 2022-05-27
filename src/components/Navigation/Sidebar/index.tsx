@@ -1,6 +1,7 @@
 import { Box, Flex, Drawer, HStack, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Stack, useBreakpointValue, Button, Icon, Text, useDisclosure, VStack } from "@chakra-ui/react";
 import { useRef } from "react";
 import { FaIndent } from "react-icons/fa";
+import Link from 'next/link';
 import { scrollAnimationToSessionPageById } from "../../../utils/scrollAnimationToSessionPageById";
 import { ItemSidebarNav } from "./ItemSidebarNav";
 
@@ -57,6 +58,7 @@ export function SidebarNav() {
                 <ItemSidebarNav href="services" text="O QUE FAÇO" />
                 <ItemSidebarNav href="portfolio" text="PORTFÓLIO" />
                 <ItemSidebarNav href="contact" text="FALE COMIGO" />
+                <ItemSidebarNav isPage href="blog" text="BLOG" />
               </VStack>
             </DrawerBody>
           </DrawerContent>

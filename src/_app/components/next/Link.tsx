@@ -16,7 +16,7 @@ export const Link = (
     ...rest
   }: LinkProps
 ) => (
-  <NLink {...rest}>
+  <NLink passHref {...rest}>
     <a className={style}>
       {!text ? children : text}
     </a>

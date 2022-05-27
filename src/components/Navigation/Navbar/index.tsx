@@ -29,6 +29,7 @@ export function Navbar() {
       <ItemNav href="services" text="O que faço" />
       <ItemNav href="portfolio" text="Meu portfólio" />
       <ItemNav href="contact" text="Fale comigo" />
+      <ItemNav isPage href="blog" text="Blog" />
     </HStack>
   );
 }

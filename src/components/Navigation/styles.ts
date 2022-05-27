@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ItemNavStyles = styled.button`
+const stylesConfig = `
   color: var(--gray-50);
   font-size: 1.2rem;
   font-family: 'Montserrat', sans-serif;
@@ -8,10 +8,8 @@ const ItemNavStyles = styled.button`
   letter-spacing: 1px;
   cursor: pointer;
 
-  // text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-
   transition: 0.2s;
-  
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,6 +33,13 @@ const ItemNavStyles = styled.button`
       width: 100%;
     }
   }
+`
+
+const ItemNavStyles = styled.button`
+  ${stylesConfig}
+`;
+const ItemLinkNavStyles = styled.a`
+  ${stylesConfig}
 `;
 
-export { ItemNavStyles };
+export { ItemNavStyles, ItemLinkNavStyles };
