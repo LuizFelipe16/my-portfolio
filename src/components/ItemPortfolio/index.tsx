@@ -1,16 +1,10 @@
 import { Button, Image, useDisclosure } from '@chakra-ui/react';
+import { Project } from '../../services';
 import { ModalViewProject } from '../Modal/ViewProject';
 import { ItemPortfolioStyle } from './styles';
 
 interface IItemPortfolioProps {
-  project: {
-    title: string;
-    description: string;
-    banner: string;
-    link: string;
-    github?: string;
-  }
-
+  project: Project;
   animation: string;
   dur: string;
 }

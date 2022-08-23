@@ -15,17 +15,13 @@ import {
   HStack
 } from '@chakra-ui/react';
 import { FaGithub, FaEye, FaDesktop } from 'react-icons/fa';
+import { Project } from '../../services';
 
 interface IModalViewProjectProps {
   isOpen: boolean;
   onClose: () => void;
 
-  project: {
-    title: string;
-    description: string;
-    github?: string;
-    link: string;
-  }
+  project: Project;
 }
 
 export function ModalViewProject({ isOpen, onClose, project }: IModalViewProjectProps) {
