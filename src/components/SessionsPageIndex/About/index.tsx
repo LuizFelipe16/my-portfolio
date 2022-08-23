@@ -26,7 +26,7 @@ export function SessionAbout() {
           </p>
         </div>
 
-        <h2>Ocupações Atuais</h2>
+        <h2>Ocupação Atual</h2>
         <p className="text-info">Frontend Developer at CodeLeap</p>
 
         <h2>Hard Skills que mais utilizo</h2>

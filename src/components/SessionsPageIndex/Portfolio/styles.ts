@@ -55,8 +55,8 @@ export const Portfolio = styled.div`
       }
 
       .portfolios{
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
 
         flex-direction: column;
       }

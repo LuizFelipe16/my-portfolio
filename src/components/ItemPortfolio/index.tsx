@@ -21,42 +21,29 @@ export function ItemPortfolio({ project, animation, dur }: IItemPortfolioProps) 
   return (
     <>
       <ItemPortfolioStyle
-        data-aos={animation}
-        data-aos-duration={dur}
+        // data-aos={animation}
+        // data-aos-duration={dur}
       >
         <Image w="100%" h="10rem" src={`/assets/${project.banner}`} objectFit="cover" borderRadius="lg" />
         <h1>{project.title}</h1>
-        <p>{project.description}</p>
+        <p className='previewContent'>{project.description}</p>
 
         <Button
           onClick={onOpen}
           w="100%"
           borderRadius="full"
-          bg="cyan.500"
+          bg="#2D3748"
+          color='cyan.500'
+          fontWeight='medium'
           size="sm"
           transition="0.2s"
 
           _hover={{
-            bg: 'cyan.600'
+            color: '#2D3748',
+            bg: 'cyan.500'
           }}
         >
           Ver Completo
-        </Button>
-        <Button
-          as="a"
-          href={project.link}
-          target="_blank"
-          w="100%"
-          borderRadius="full"
-          bg="cyan.500"
-          size="sm"
-          transition="0.2s"
-
-          _hover={{
-            bg: 'cyan.600'
-          }}
-        >
-          Acessar
         </Button>
       </ItemPortfolioStyle>
       <ModalViewProject isOpen={isOpen} onClose={onClose} project={project} />

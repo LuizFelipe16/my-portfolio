@@ -7,7 +7,7 @@ export const Skills = styled.div`
   padding: 2rem;
   padding-top: 12rem;
   padding-bottom: 4rem;
-  background-color: var(--gray-200);
+  background-color: var(--gray-100);
 
   flex-direction: row;
   align-items: flex-start;
@@ -39,13 +39,13 @@ export const Skills = styled.div`
     position: relative;
 
     > div {
-      width: 1rem;
-      height: 1rem;
+      width: 0.7rem;
+      height: 0.7rem;
       position: absolute;
       border-radius: 100%;
-      background: var(--cyan-500);
+      background: var(--gray-800);
       margin-top: 7rem;
-      left: -7px;
+      left: -4px;
 
       & + div {
         margin-top: 18rem;

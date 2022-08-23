@@ -76,15 +76,26 @@ export const TecSkillsStyles = styled.div`
 
   @media (min-width: 200px) and (max-width: 980px) {
     & {
+      padding: 0;
       justify-content: center;
       align-items: center;
       gap: 0 !important;
 
       .swiper-skills {
         width: 100%;
-        padding-left: 0rem;
-        padding-bottom: 0rem;
+        padding-left: 0;
+        padding-bottom: 0;
+        margin-top: 2rem;
 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .swiper-content-item {
+        width: 100%;
+        height: 100%;
+        display: flex;
         align-items: center;
         justify-content: center;
       }
@@ -92,7 +103,7 @@ export const TecSkillsStyles = styled.div`
       .item {
         align-self: center;
         justify-self: center;
-        margin-left: 7rem;
+        /* margin-left: 3rem; */
         margin-bottom: 2rem;
 
         .icon {

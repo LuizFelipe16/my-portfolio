@@ -73,12 +73,12 @@ function PagePost({ post }: PostProps) {
           ))}
         </View>
 
-        {SectionComments()}
+        {/* {SectionComments()} */}
 
         <Author name={post.data.author} />
       </View>
 
-      <Footer />
+      <Footer isBlog />
     </Post>
   );
 }

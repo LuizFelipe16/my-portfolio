@@ -11,9 +11,10 @@ import {
   Link,
   Icon,
   VStack,
-  Flex
+  Flex,
+  HStack
 } from '@chakra-ui/react';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaEye, FaDesktop } from 'react-icons/fa';
 
 interface IModalViewProjectProps {
   isOpen: boolean;
@@ -23,6 +24,7 @@ interface IModalViewProjectProps {
     title: string;
     description: string;
     github?: string;
+    link: string;
   }
 }
 
@@ -31,11 +33,16 @@ export function ModalViewProject({ isOpen, onClose, project }: IModalViewProject
     <Modal isCentered isOpen={isOpen} onClose={onClose} size="6xl">
       <ModalOverlay />
       <ModalContent bg="gray.900" color="gray.100">
-        <ModalHeader>{project.title}</ModalHeader>
+        <ModalHeader>
+          <HStack spacing={2}>
+            <Icon as={FaDesktop} ml="2" fontSize="lg" color={'cyan.500'} />
+            <Text>{project.title}</Text>
+          </HStack>
+        </ModalHeader>
         <ModalCloseButton />
         <ModalBody>
           <VStack>
-            <Text fontFamily="Montserrat" lineHeight="6" fontWeight="200" fontSize="1rem">
+            <Text fontFamily="Montserrat" lineHeight="7" fontWeight="200" fontSize="1rem">
               {project.description}
             </Text>
           </VStack>
@@ -66,6 +73,32 @@ export function ModalViewProject({ isOpen, onClose, project }: IModalViewProject
                 Acessar Código/Documentação
               </Link>
               <Icon as={FaGithub} ml="2" fontSize="lg" />
+            </Flex>
+          )}
+          {!!project?.link && (
+            <Flex
+              align="center"
+              justify="center"
+              mr="4"
+              p="2"
+              px="4"
+              borderRadius="full"
+              bg="cyan.500"
+              color="gray.900"
+              fontWeight="600"
+              fontSize="sm"
+              textAlign="center"
+
+              transition="0.2s"
+              _hover={{
+                textDecoration: 'none',
+                bg: 'cyan.600'
+              }}
+            >
+              <Link href={project?.github} target="_blank">
+                Acessar Site/Plataforma Web
+              </Link>
+              <Icon as={FaEye} ml="2" fontSize="lg" />
             </Flex>
           )}
           <Button

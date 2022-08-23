@@ -9,9 +9,10 @@ interface ItemSpaceProps {
   description: string;
   icon: string;
   href: string;
+  onClick?: () => void;
 };
 
-export const ItemSpace = ({ title, description, icon, href }: ItemSpaceProps) => (
+export const ItemSpace = ({ title, description, icon, href, onClick }: ItemSpaceProps) => (
   <ItemSpaceStyled>
     <img src={icon} alt='Ícone de programação' />
     <View style='content'>
@@ -19,7 +20,9 @@ export const ItemSpace = ({ title, description, icon, href }: ItemSpaceProps) =>
       <Text text={description} />
     </View>
     <Link href={href} style='go'>
-      <Icon as={FaLongArrowAltRight} />
+      <button onClick={onClick}>
+        <Icon as={FaLongArrowAltRight} />
+      </button>
     </Link>
   </ItemSpaceStyled>
 );

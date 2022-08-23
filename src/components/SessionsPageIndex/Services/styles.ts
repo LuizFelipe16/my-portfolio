@@ -49,7 +49,7 @@ export const Services = styled.div`
     & {
       background-image: none;
 
-      padding: 2rem;
+      padding: 1.2rem;
       gap: 2rem;
 
       .services {

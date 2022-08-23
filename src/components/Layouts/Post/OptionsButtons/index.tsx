@@ -1,6 +1,7 @@
 import { useToast } from '@chakra-ui/react';
-import { AiOutlineLink, AiFillInstagram } from 'react-icons/ai';
+import { AiOutlineLink, AiFillInstagram, AiOutlineArrowUp } from 'react-icons/ai';
 import { FaLongArrowAltLeft } from 'react-icons/fa';
+import { animateScroll } from 'react-scroll';
 import Router from 'next/router';
 
 import { copyToClipboard } from '../../../../utils';
@@ -26,10 +27,14 @@ export const OptionsButtons = () => {
 
   return (
     <>
-      <Link href='/blog' style={styles.back_page}><FaLongArrowAltLeft /></Link>
+      <Link href='/posts/programacao' style={styles.back_page}><FaLongArrowAltLeft /></Link>
 
       <View style={`${styles.options_post} ${styles.options_post_link}`}>
         <button type="button" onClick={copyRouteToClipboard}><AiOutlineLink size={22} /></button>
+      </View>
+
+      <View style={`${styles.options_post} ${styles.options_post_top}`}>
+        <button type="button" onClick={() => animateScroll.scrollToTop({ duration: 1000 })}><AiOutlineArrowUp size={22} /></button>
       </View>
 
       <View style={`${styles.options_post} ${styles.options_post_insta}`}>

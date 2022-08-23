@@ -1,17 +1,20 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import type { GetStaticProps, GetStaticPaths } from 'next';
+import { BsFillFileEarmarkCodeFill } from 'react-icons/bs'
 
-import { FaLongArrowAltLeft } from 'react-icons/fa';
 import Prismic from '@prismicio/client';
 
 import { getPrismicClient } from '../../services';
 
 import type { PostData, RouterCategories } from '../../types';
-import { Loading } from '../../components';
-import { Link, Text, TitlePage, View } from '../../_app';
+import { Footer, Loading } from '../../components';
+import { Interactive3DElement, Link, Text, TitlePage, View } from '../../_app';
 
 import { Posts, Post } from './styles';
+import { Button, Icon, Spinner } from '@chakra-ui/react';
+import { MyParticles } from '../../components/MyParticles';
+import { Navigation } from '../../components/Posts';
 
 interface PostPagination {
   next_page: string;
@@ -28,33 +31,41 @@ function PagePosts({ postsPagination }: PostsProps) {
 
   const category = query?.category == 'programacao' ? 'Programação' : 'Design';
 
-  useEffect(() => { setTimeout(() => setIsLoading(false), 500) }, []);
+  useEffect(() => { setTimeout(() => setIsLoading(false), 1000) }, []);
 
   if (!!isLoading) return <Loading />;
 
   return (
     <Posts>
       <TitlePage t={`Posts ${category}`} />
-      <Link href='/blog' style='backPage'>
-        <FaLongArrowAltLeft />
-      </Link>
 
-      <Text type='h1' text={`Posts ${category}`} />
-      <Text text='Códigos... coisa magnífica! Acesse um dos conteúdos que foram preparados cuidadosamente para você.' />
+      <MyParticles opacity={0.1} id='bgParticlesPageBlog' />
 
-      <View type='main' style='posts'>
-        {postsPagination.results.map(post => (
-          <Post key={post.uid}>
-            <img src={post.data.banner.url} alt={post.data.title} />
+      <Navigation />
 
-            <View style='content'>
-              <Text type='h1' text={post.data.title} />
-              <Text text={post.data.description} />
-              <Link href={`/posts/post/${post.uid}`}><a>Ver Post</a></Link>
-            </View>
-          </Post>
-        ))}
+      <View className='blog-content'>
+        <h1>
+          <Icon className='icon' as={BsFillFileEarmarkCodeFill} color="cyan.500" fontSize={["1.2rem", "1.3rem", "1.4rem"]} />
+          Bem vindo
+        </h1>
+        <Text text={`Conteúdos gerais sobre ${category}`} />
+
+        <View type='main' style='posts'>
+          {postsPagination.results.map(post => (
+            <Post key={post.uid}>
+              <img src={post.data.banner.url} alt={post.data.title} />
+
+              <View style='content'>
+                <Text type='h1' text={post.data.title} />
+                <Text text={post.data.description} />
+                <Link href={`/posts/post/${post.uid}`}><a>Ver Post</a></Link>
+              </View>
+            </Post>
+          ))}
+        </View>
       </View>
+
+      <Footer isBlog />
     </Posts>
   );
 }

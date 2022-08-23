@@ -56,8 +56,16 @@ export const ItemServiceStyle = styled.div`
 
   @media (min-width: 200px) and (max-width: 980px) {
     & {
-      width: 95%;
+      width: 100%;
       height: auto;
+
+      h1 {
+        font-size: 1.7rem;
+      }
+      
+      p {
+        width: 100%;
+      }
     }
   }
 `;

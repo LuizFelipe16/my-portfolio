@@ -2,7 +2,7 @@ type Project = {
   id: number;
   title: string;
   banner: string;
-  link: string;
+  link?: string;
   github?: string;
   description: string;
   access?: boolean;
@@ -13,7 +13,7 @@ export const projects: Project[] = [
     id: 1,
     title: 'MyMoon',
     banner: 'my-moon.png',
-    link: 'https://github.com/LuizFelipe16/my-moon',
+    // link: 'https://github.com/LuizFelipe16/my-moon',
     github: 'https://github.com/LuizFelipe16/my-moon',
     description: 'O projeto mais complexo e completo que já desenvolvi, lidei com o máximo de bibliotecas que aprendi durante o programa Ignite da Rocketseat, me importando muito com o código e a organização do projeto. O propósito principal dele é ser uma plataforma para as pessoas entrarem e criarem listas de tarefas noturnas (filmes, séries e atividades similares), particularmente criei isso pois gosto de fazer e criar coisas durante a noite, e gostaria de colocar isso em algum lugar, como um registro, assim como queria explorar muitas e muitas ferramentas modernas em um só projeto, usando diferentes estratégias para um mesmo fim. Internamente implementei o controle de dados com ReactHookForm, cache de dados com ReactQuery, autenticação de login com NextAuth, utilização de métodos GetStaticProps e GetServerSideProps, validação dos formulários com Yup, estilização com Styled Components, design system ChakraUI e RadixUI, banco de dados FaunaDB, integração a um blog com PrismicCMS, testes unitários com Jest e Testing Library, animações de conteúdo com AnimateOnScrollLib e estratégias para melhorar a performance da aplicação.'
   },

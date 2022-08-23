@@ -12,7 +12,9 @@ export const GlobalStyle = createGlobalStyle`
     --gray-300: #B3B5C6;
     --gray-200: #B3B5C6;
     --gray-100: #D1D2DC;
+    --gray-80: #E1E1E6;
     --gray-50: #fff;
+
 
     --purple-900: #5429cc;
     --purple-800: #44337A;
@@ -84,7 +86,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   ::-webkit-scrollbar {
-    width: 12px;
+    width: 6px;
     background: var(--gray-900);
   }
   

@@ -35,7 +35,7 @@ export const MenuTools = styled.div`
 
   @keyframes menu_open {
     from {
-      margin-bottom: -14rem;
+      margin-bottom: -10rem;
     }
     to {
       margin-bottom: 0rem;

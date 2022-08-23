@@ -24,9 +24,11 @@ export const Entry = styled.main`
   }
 
   .element-3d {
-    width: 65%;
+    width: 60%;
     height: 100vh;
 
+    background-color: transparent !important;
+    
     position: absolute;
     right: -20px;
     top: 0;
@@ -37,6 +39,7 @@ export const Entry = styled.main`
     width: 65%;
     height: 100vh;
 
+    background-color: transparent !important;
     position: absolute;
     right: -20px;
     top: 0;
@@ -146,6 +149,16 @@ export const Entry = styled.main`
         }
         100% {
           border-color: var(--gray-900);
+        }
+      }
+    }
+  }
+
+  @media (min-width: 325px) and (max-width: 979px) {
+    & {
+      .content {
+        > h1 {
+          animation: none;
         }
       }
     }

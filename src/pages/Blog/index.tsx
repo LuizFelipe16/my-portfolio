@@ -9,7 +9,7 @@ import { Spaces } from './styles';
 export default function PageBlog() {
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => { setTimeout(() => setIsLoading(false), 500) }, []);
+  useEffect(() => { setTimeout(() => setIsLoading(false), 100) }, []);
 
   if (!!isLoading) return <Loading />;
 
@@ -30,12 +30,14 @@ export default function PageBlog() {
           title='Programação' 
           description='Conteúdo épico sobre o universo da programação'
           href='/posts/programacao'
+          onClick={() => setIsLoading(true)}
         />
         <ItemSpace 
           icon='/icons/design.png'
           title='Design' 
           description='Conteúdo épico sobre o universo do design'
           href='/posts/design'
+          onClick={() => setIsLoading(true)}
         />
       </View>
     </Spaces>

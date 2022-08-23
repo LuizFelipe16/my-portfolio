@@ -12,7 +12,7 @@ interface IMenuButtonProps {
   isMenuOpen?: boolean;
 }
 
-export function MenuButtons({ isMenuOpen = true }: IMenuButtonProps) {
+export function MenuButtons({ isMenuOpen = false }: IMenuButtonProps) {
   const [isMenu, setIsMenu] = useState(isMenuOpen);
   const handleOnOpenOrCloseMenu = () => setIsMenu(!isMenu);
 

@@ -1,25 +1,32 @@
 import NLink from "next/link";
-import { Text, Button, Spinner, Icon } from "@chakra-ui/react";
+import { Text, Button, Spinner, useBreakpointValue } from "@chakra-ui/react";
 import { useState } from "react";
-import { HiArrowNarrowRight } from 'react-icons/hi'
 
 import { Navigation } from "../../../components/Navigation";
 import { Interactive3DElement, View } from "../../../_app";
 
 import { Entry } from "./styles";
+import { MyParticles } from "../../MyParticles";
 
 export function SessionEntry() {
-  const [isLoadingElement3d, setLoadingIsElement3d] = useState(true);
+  const [isLoadingElements, setIsLoadingElements] = useState(true);
+
+  const isMobileVersion = useBreakpointValue({
+    base: true,
+    lg: false,
+  });
 
   return (
     <Entry>
       <Navigation />
 
-      {!!isLoadingElement3d && <div className="loading-element-3d"><Spinner color='cyan.500' size="xl" /></div>}
+      {!isLoadingElements && <MyParticles id='bgParticlesPageApp' />}
+
+      {!!isLoadingElements && !isMobileVersion && <div className="loading-element-3d"><Spinner color='cyan.500' size="xl" /></div>}
       <Interactive3DElement
         style="element-3d"
-        scene="https://draft.spline.design/fXF3-Xm0PBYNFdNN/scene.splinecode"
-        onLoad={(SplineApplication) => {SplineApplication.setZoom(0.8); setLoadingIsElement3d(false)}}
+        scene="https://prod.spline.design/CvPbd63Q829YZyZk/scene.splinecode"
+        onLoad={(SplineApplication) => {SplineApplication.setZoom(0.8); setIsLoadingElements(false)}}
       />
 
       <View style="content">
@@ -36,11 +43,14 @@ export function SessionEntry() {
         </Text>
 
         <h1 className="text-typing">
-          Desenvolvendo soluções para o <strong>futuro...</strong>
+          {isMobileVersion 
+            ? ( <>Criando soluções para o <strong>futuro...</strong></> )
+            : ( <>Desenvolvendo soluções para o <strong>futuro...</strong></> )
+          }
         </h1>
 
         <div data-aos='fade-right' data-aos-duration='1000'>
-          <NLink href='/blog'>
+          <NLink href='/posts/programacao' passHref>
             <Button 
               className='access-button'
               boxShadow='dark-lg'

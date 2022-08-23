@@ -21,7 +21,7 @@ function IndexPage() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoadingActive(false);
-    }, 2000);
+    }, 1000);
   }, []);
 
   if (!!isLoadingActive) return <Loading text='Olá, eu sou...' />;

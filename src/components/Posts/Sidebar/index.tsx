@@ -1,8 +1,6 @@
-import { Box, Flex, Drawer, HStack, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Stack, useBreakpointValue, Button, Icon, Text, useDisclosure, VStack } from "@chakra-ui/react";
+import { Flex, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Button, Icon, useDisclosure, VStack } from "@chakra-ui/react";
 import { useRef } from "react";
 import { FaIndent } from "react-icons/fa";
-import Link from 'next/link';
-import { scrollAnimationToSessionPageById } from "../../../utils/scrollAnimationToSessionPageById";
 import { ItemSidebarNav } from "./ItemSidebarNav";
 
 export function SidebarNav() {
@@ -43,7 +41,7 @@ export function SidebarNav() {
               color="cyan.500"
               fontSize="2xl"
             >
-              Navegue
+              MyBlog
             </DrawerHeader>
             <DrawerBody>
               <VStack
@@ -54,11 +52,10 @@ export function SidebarNav() {
                 align="flex-start"
                 fontFamily="Montserrat"
               >
-                <ItemSidebarNav href="about" text="QUEM SOU" />
-                <ItemSidebarNav href="services" text="O QUE FAÇO" />
-                <ItemSidebarNav href="portfolio" text="PORTFÓLIO" />
-                <ItemSidebarNav href="contact" text="FALE COMIGO" />
-                <ItemSidebarNav isPage href="posts/programacao" text="BLOG" />
+                <ItemSidebarNav href="about" text="Front-end" />
+                <ItemSidebarNav href="services" text="Mobile" />
+                <ItemSidebarNav href="portfolio" text="Back-end" />
+                <ItemSidebarNav isPage href="/" text="Voltar" />
               </VStack>
             </DrawerBody>
           </DrawerContent>
